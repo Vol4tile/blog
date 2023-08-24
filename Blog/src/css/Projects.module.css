@@ -1,0 +1,163 @@
+.page {
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: calc(100% - 210px);
+
+  display: flex;
+
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.innerPage {
+  width: 70%;
+height: auto;
+  display: flex;
+  gap: 10px;
+  background-color: #fafafa;
+}
+.innerPage a,
+.innerPage a:hover,
+.innerPage a:visited {
+  color: #151515;
+  text-decoration: none;
+}
+.innerPage i {
+  color: black;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerPage i:hover {
+  color: #2980b9;
+}
+.container {
+  width: 50%;
+  height: 100%;
+ 
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.exampleContainer {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+  box-shadow: #c4c4c4 1px 0px 5px 1px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
+}
+
+.exampleContainer img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  min-width: 512px;
+
+  min-height: 288px;
+}
+
+.projectInfo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+.projectsName {
+  width: 100%;
+}
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.7;
+}
+.tags {
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  flex-direction: row;
+
+  gap: 5px;
+}
+.tag {
+  background-color: #edf6fa;
+  padding: 10px 20px 10px 20px;
+  color: rgb(20, 141, 141);
+  border-radius: 15px;
+}
+@media only screen and (max-width: 1280px) {
+  .innerPage {
+    width: 90%;
+    height: 100%;
+  
+  }
+  .exampleContainer img{
+    min-width: 100pxpx;
+  
+  }
+}
+@media only screen and (max-width: 960px) {
+  .innerPage  {
+
+   flex-direction: column;
+  }
+  .container{
+    width: 100%;
+    height: 100% ;
+  min-height: 400px;}
+  .exampleContainer{
+    height: 100vh;
+  }
+  .exampleContainer img{
+   height: auto;
+  }
+  .projectInfo{
+    width: 100%;
+  }
+  
+}
