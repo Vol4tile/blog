@@ -93,7 +93,7 @@ const Project = ({ project }) => {
         <div className={ProjectsCSS.date}>
           <span>{project.createDate}</span>
 
-          <a href="">
+          <a href={project.githubLink} target="_blank">
             {" "}
             <i className="fa fa-github" aria-hidden="true"></i>
           </a>

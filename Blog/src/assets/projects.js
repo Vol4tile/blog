@@ -7,7 +7,7 @@ export const projects = [
     description:
       "Kullanıcıların kayıt olup paylaşım, beğeni ve yorum yapabildikleri; grup oluşturup insanlarla tartışabilecekleri bir platformdur.",
     createDate: "18 Ağustos 2022",
-    githubLink: "",
+    githubLink: "https://github.com/Vol4tile/PaylasimPlatformu",
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ export const projects = [
     description:
       "Kullanıcıların HTML CSS kodlarını online olarak derleyebilecekleri ve kodlarını renkli olarak paylaşabilecekleri bir platformdur.",
     createDate: "18 Ağustos 2022",
-    githubLink: "",
+    githubLink: "https://github.com/Vol4tile/ClassyCodes",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const projects = [
     description:
       "Kullanıcıların web sitelerindeki deneyimleri puanlayıp yorum yapabildikleri ve en iyi sitelerin listelendiği bir platform.",
     createDate: "1 Nisan 2023",
-    githubLink: "",
+    githubLink: "https://github.com/Vol4tile/Webrate",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const projects = [
     description:
       "Türkçe anlamlarıyla ingilizce kelimeleri ekleyip kendinizi test edebileceğiniz bir masaüstü uygulaması.",
     createDate: "18 Ağustos 2022",
-    githubLink: "",
+    githubLink: "https://github.com/Vol4tile/WordBookDesktop",
   },
   {
     id: 4,
@@ -47,6 +47,6 @@ export const projects = [
     description:
       "Bir metindeki istenmeyen kelimelerin tespit edilebildiği istendiğinde ise *** şeklinde sansürlenebildiği bir kütüphanedir.",
     createDate: "5 Nisan 2023",
-    githubLink: "",
+    githubLink: "https://github.com/Vol4tile/beyefendi.js",
   },
 ];
