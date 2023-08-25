@@ -2,9 +2,6 @@
  Personel blog with Vite React
 
 ```bash
+cd blog
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
