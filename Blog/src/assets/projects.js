@@ -49,4 +49,24 @@ export const projects = [
     createDate: "5 Nisan 2023",
     githubLink: "https://github.com/Vol4tile/beyefendi.js",
   },
+  {
+    id: 5,
+    images: ["FullStackBlog/1.png", "FullStackBlog/2.png","FullStackBlog/3.png","FullStackBlog/4.png","FullStackBlog/5.png","FullStackBlog/6.png","FullStackBlog/7.png","FullStackBlog/8.png"],
+    name: "Full Stack Blog",
+    languages: ["React","Express","Node"],
+    description:
+      "Kaydolup paylaşım yapılabilen jwt doğrulama kullanan basit bir blog",
+    createDate: "30 Haziran 2023",
+    githubLink: "https://github.com/Vol4tile/Full-Stack-Blog",
+  },
+  {
+    id: 5,
+    images: ["KurumsalWebsite/1.png", "KurumsalWebsite/2.png","KurumsalWebsite/3.png","KurumsalWebsite/4.png","KurumsalWebsite/5.png","KurumsalWebsite/6.png","KurumsalWebsite/7.png"],
+    name: "Kurumsal Website",
+    languages: ["React","Next","Tailwind"],
+    description:
+      "Ürün tanıtımı ve fiyatlandırma hakkında bilgi veren kurumsal website",
+    createDate: "1 Ağustos 2023",
+    githubLink: "https://github.com/Vol4tile/Corporate-website",
+  },
 ];

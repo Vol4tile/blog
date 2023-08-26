@@ -27,3 +27,7 @@ footer {
 .socialMedias i:hover {
   color: #2980b9;
 }
+.socialMedias a{
+  text-decoration: none;
+  color: black;
+}
