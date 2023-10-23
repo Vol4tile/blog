@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   
-  height: calc(100% - 285px);
+  height: calc(100% - 245px);
   overflow: scroll;
   overflow-x:hidden ;
 

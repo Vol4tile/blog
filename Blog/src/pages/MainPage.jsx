@@ -38,8 +38,8 @@ const MainPage = () => {
                     <img src={post.paylasanResmi} alt={post.paylasanAdi} />
                   </div>
                   <div className={MainCSS.writerInfo}>
-                    <div>{post.paylasanAdi}</div>
-                    <div>{post.paylasanUnvan}</div>
+                    <div className={MainCSS.writerName}>{post.paylasanAdi}</div>
+                    <div className={MainCSS.writerTitle}>{post.paylasanUnvan}</div>
                   </div>
                 </div>
                 <div

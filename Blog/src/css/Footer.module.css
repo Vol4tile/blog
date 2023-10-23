@@ -1,5 +1,6 @@
 footer {
-  height: 100px;
+  height: 60px;
+ 
   display: flex;
   gap: 5px;
   justify-content: center;
@@ -7,9 +8,7 @@ footer {
   flex-direction: column;
   color: black;
   opacity: 0.7;
-  -webkit-box-shadow: 0px -4px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px -4px 1pxrgba (0, 0, 0, 0.1);
-  box-shadow: 0px -4px 1px rgba(0, 0, 0, 0.1);
+  
 }
 .socialMedias {
   width: 200px;
