@@ -23,17 +23,17 @@ height: auto;
   color: #151515;
   text-decoration: none;
 }
-.innerPage i {
+.innerPage svg {
   color: black;
-  height: 40px;
-  width: 40px;
-  font-size: 30px;
+  height: 30px;
+  width: 30px;
+ 
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.innerPage i:hover {
+.innerPage svg:hover {
   color: #2980b9;
 }
 .container {

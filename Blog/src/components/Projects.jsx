@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProjectsCSS from "../css/Projects.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { AiFillGithub } from "react-icons/ai";
 import { wrap } from "popmotion";
 const Project = ({ project }) => {
   const variants = {
@@ -95,7 +95,7 @@ const Project = ({ project }) => {
 
           <a href={project.githubLink} target="_blank">
             {" "}
-            <i className="fa fa-github" aria-hidden="true"></i>
+            <AiFillGithub/>
           </a>
         </div>
       </div>

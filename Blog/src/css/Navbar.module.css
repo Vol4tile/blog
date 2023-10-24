@@ -45,7 +45,7 @@ nav a,
 nav a:link,
 nav a:visited {
   position: relative;
-  color: black;
+  color: rgb(153, 153, 153);
   text-decoration: none;
   width: fit-content;
   padding: 5px;
