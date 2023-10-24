@@ -1,32 +1,42 @@
 footer {
   height: 60px;
- 
+ font-weight: 600;
   display: flex;
-  gap: 5px;
+ gap: 5px;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+ 
   color: black;
   opacity: 0.7;
   
 }
 .socialMedias {
-  width: 200px;
+  width: auto;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
-.socialMedias i {
+.socialMedias svg {
   width: 24px;
   height: 24px;
   font-size: 24px;
 }
-.socialMedias i:hover {
-  color: #2980b9;
+.socialMedias svg:hover {
+  color: #004472;
 }
 .socialMedias a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: black;
+}
+.copyright{
+
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

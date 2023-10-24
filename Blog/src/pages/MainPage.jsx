@@ -31,7 +31,7 @@ const MainPage = () => {
                 <div className={MainCSS.tag}>{post.etiket}</div>
               </div>
               <h1>{post.baslik}</h1>
-              <p>{post.metin.substring(0, 400)}...</p>
+              <p>{post.metin.substring(0, 450)}...</p>
               <div className={MainCSS.bottomContent}>
                 <div className={MainCSS.writer}>
                   <div className={MainCSS.writerImage}>

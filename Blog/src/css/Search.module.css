@@ -17,7 +17,7 @@
   color: #777777;
   background: url("../assets/search.svg") no-repeat 10px center;
   background-size: 15px;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(243, 243, 243);
 }
 .container input::-webkit-input-placeholder {
   color: #777777;

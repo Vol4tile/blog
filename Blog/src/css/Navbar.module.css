@@ -25,7 +25,7 @@ nav a:hover::after {
 
   z-index: -1;
   animation: 0.5s in-out forwards;
-  background: #2980b9;
+  background: black;
  
 
   width: 100%;
@@ -54,11 +54,11 @@ nav a:visited {
   align-items: center;
 }
 nav a:hover {
-  color: #16627e;
+  color: black;
 }
 
 .active {
-  color: #16627e !important;
+  color: black !important;
 }
 .active::after {
   content: "";
@@ -67,7 +67,7 @@ nav a:hover {
 
   z-index: -1;
 
-  background: #2980b9; 
+  background: black; 
   
 
   width: 100%;

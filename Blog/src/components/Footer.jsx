@@ -1,17 +1,18 @@
 import React from "react";
 import FooterCSS from "../css/Footer.module.css";
+import {AiFillGithub,AiFillLinkedin} from "react-icons/ai"
 const Footer = () => {
   return (
     <>
       <footer>
         <div className={FooterCSS.socialMedias}>
           <a  href="https://github.com/Vol4tile" target="_blank">
-            <i className="fa fa-github" aria-hidden="true"></i>
+          <AiFillGithub/>
           </a>
           <a  href="https://www.linkedin.com/in/ilkanerdogan" target="_blank">
-          <i className="fa fa-linkedin" aria-hidden="true"></i></a>
+          <AiFillLinkedin/></a>
         </div>
-        <div> © {new Date().getFullYear()} İlkan Erdoğan </div>
+        <div className={FooterCSS.copyright}>  {new Date().getFullYear()} İlkan Erdoğan </div>
       </footer>
     </>
   );
