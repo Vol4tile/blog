@@ -45,7 +45,7 @@
   padding: 7px;
   height: 128px;
   width: 128px;
-  object-fit: cover;
+  object-fit: inherit;
 }
 
 .skills {
