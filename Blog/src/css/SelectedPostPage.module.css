@@ -3,6 +3,7 @@
   min-height: 100vh;
   display: flex;
 color: white;
+font-size: 16px;
   justify-content: center;
 }
 .container {
