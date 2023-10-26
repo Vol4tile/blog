@@ -131,22 +131,22 @@ main {
   border: none;
   outline: none;
   color: white;
-  background: #2980b9; /* fallback for old browsers */
+  background: rgb(20, 141, 141); /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #d3f8ff,
-    #6dd5fa,
-    #70bff3,
-    #6dd5fa,
-    #d3f8ff
+    rgb(73, 212, 212),
+    rgb(31, 161, 161),
+    rgb(20, 141, 141),
+    rgb(31, 161, 161),
+    rgb(73, 212, 212)
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #d3f8ff,
-    #6dd5fa,
-    #70bff3,
-    #6dd5fa,
-    #d3f8ff
+    rgb(73, 212, 212),
+    rgb(31, 161, 161),
+    rgb(20, 141, 141),
+    rgb(31, 161, 161),
+    rgb(73, 212, 212)
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transition: 300ms;
   background-size: 200% 100%;

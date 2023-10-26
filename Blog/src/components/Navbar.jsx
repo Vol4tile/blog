@@ -47,7 +47,7 @@ const Navbar = () => {
           >
             CV
           </NavLink>
-          <span className="line"></span>
+         
         </nav>
       </header>
     </>

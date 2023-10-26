@@ -24,7 +24,7 @@ footer {
   font-size: 24px;
 }
 .socialMedias svg:hover {
-  color: #a6bdcc;
+  color: rgb(20, 141, 141);
 }
 .socialMedias a{
   display: flex;

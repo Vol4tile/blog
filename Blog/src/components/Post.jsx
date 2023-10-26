@@ -20,7 +20,7 @@ const Post = ({ post }) => {
           <div className={PostCSS.tag}>{post.etiket}</div>
         </div>
         <h1>{post.baslik}</h1>
-        <p>{post.metin.substring(0, 300)}</p>
+        <p>{post.metin.substring(0, 700)}...</p>
         <div className={PostCSS.bottomContent}>
           <div className={PostCSS.writer}>
             <div className={PostCSS.writerImage}>

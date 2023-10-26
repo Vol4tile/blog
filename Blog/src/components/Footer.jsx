@@ -12,7 +12,7 @@ const Footer = () => {
           <a  href="https://www.linkedin.com/in/ilkanerdogan" target="_blank">
           <AiFillLinkedin/></a>
         </div>
-        <div className={FooterCSS.copyright}>  {new Date().getFullYear()} İlkan Erdoğan </div>
+        <div className={FooterCSS.copyright}>  {new Date().getFullYear()} İlkan ERDOĞAN </div>
       </footer>
     </>
   );

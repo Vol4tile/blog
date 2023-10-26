@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  overflow: hidden;
+  height: 800px;
   border-radius: 6px;
   width: 512px;
   max-width: calc(33% - 60px);
   gap: 20px;
+  font-size: 16px;
+  height: auto;
 }
 h1 {
   padding: 5px;
@@ -76,7 +78,7 @@ h1 {
   padding: 5px;
 
   width: 100%;
-  height: 120px;
+  height: 220px;
   word-break: break-word;
   font-weight: 370;
 }
@@ -92,6 +94,10 @@ h1 {
 }
 
 @media only screen and (max-width: 1280px) {
+  .article p {
+  
+    margin-bottom: 20px;
+  }
   main {
     flex-direction: column;
     height: auto;
@@ -102,6 +108,7 @@ h1 {
   }
   .article {
     width: 512px;
+    height: 750px;
     max-width: calc(100% - 30px);
   }
   nav {
