@@ -1,11 +1,19 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import MainCSS from "../css/Main.module.css";
 import SelectedPostPageCSS from "../css/SelectedPostPage.module.css";
+import { allPosts } from "../assets/posts";
 const SelectedPostPage = () => {
-  const { state } = useLocation();
-  console.log(state);
+  const { postId } = useParams();
+  const post = allPosts.find((item) => 
+    (item.id) === parseInt(postId)
+  );
+  console.log(post.paylasimResmi);
+  if (!post) {
+    // Eğer yazı bulunamazsa, uygun bir işlem yapabilirsiniz
+    return <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"calc(100% - 170px)",color:"white"}}>Yazı bulunamadı.</div>;
+  }
   return (
     <motion.article
       className={SelectedPostPageCSS.article}
@@ -15,25 +23,22 @@ const SelectedPostPage = () => {
     >
       <div className={SelectedPostPageCSS.container}>
         <div className={SelectedPostPageCSS.postImage}>
-          <img src={state.post.paylasimResmi} alt="React logosu" />
+          <img src={`/${post.paylasimResmi}`} alt="React logosu" />
         </div>
         <div className={SelectedPostPageCSS.date}>
-          <div>{state.post.tarih}</div>
-          <div className={SelectedPostPageCSS.tag}>{state.post.etiket}</div>
+          <div>{post.tarih}</div>
+          <div className={SelectedPostPageCSS.tag}>{post.etiket}</div>
         </div>
-        <h1>{state.post.baslik}</h1>
-        <p>{state.post.metin}</p>
+        <h1>{post.baslik}</h1>
+        <p>{post.metin}</p>
         <div className={SelectedPostPageCSS.bottomContent}>
           <div className={SelectedPostPageCSS.writer}>
             <div className={SelectedPostPageCSS.writerImage}>
-              <img
-                src={state.post.paylasanResmi}
-                alt={state.post.paylasanAdi}
-              />
+              <img  src={`/${post.paylasanResmi}`}  alt={post.paylasanAdi} />
             </div>
             <div className={SelectedPostPageCSS.writerInfo}>
-              <div>{state.post.paylasanAdi}</div>
-              <div>{state.post.paylasanUnvan}</div>
+              <div>{post.paylasanAdi}</div>
+              <div>{post.paylasanUnvan}</div>
             </div>
           </div>
           <div
@@ -43,12 +48,7 @@ const SelectedPostPage = () => {
               alignItems: "center",
             }}
           ></div>
-          <div>
-            <a href="">
-              {" "}
-              <i className="fa fa-github" aria-hidden="true"></i>
-            </a>
-          </div>
+         
         </div>
       </div>
     </motion.article>

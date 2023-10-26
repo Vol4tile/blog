@@ -15,7 +15,7 @@ const Navbar = () => {
             Anasayfa
           </NavLink>
           <NavLink
-            to="Projects"
+            to="/Projects"
             className={({ isActive, isPending }) =>
               isPending ? NavbarCSS.pending : isActive ? NavbarCSS.active : ""
             }
@@ -32,7 +32,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="Posts"
+            to="/Posts"
             className={({ isActive, isPending }) =>
               isPending ? NavbarCSS.pending : isActive ? NavbarCSS.active : ""
             }
@@ -40,7 +40,7 @@ const Navbar = () => {
             Paylaşımlar
           </NavLink>
           <NavLink
-            to="CV"
+            to="/CV"
             className={({ isActive, isPending }) =>
               isPending ? NavbarCSS.pending : isActive ? NavbarCSS.active : ""
             }

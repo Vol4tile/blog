@@ -1,6 +1,8 @@
 main {
   width: 100%;
-  height: calc(100% - 170px);
+ min-height: calc(100% - 160px);
+ max-height: calc(100% - 160px);
+
   align-items: center;
   justify-content: center;
   display: flex;
@@ -16,7 +18,7 @@ main {
   max-width: calc(33% - 60px);
   gap: 20px;
 }
-.me{
+.me {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,41 +66,103 @@ main {
   font-style: italic;
   font-size: 2em;
   height: 100px;
-
+  color: rgb(20, 141, 141);
   font-weight: 700;
 }
 
+.code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: slideTop 300ms ease-in;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(50%); /* Sağda başlat */
+  }
+  100% {
+    transform: translateX(0); /* Sola bitir */
+  }
+}
 @media only screen and (max-width: 1280px) {
+ 
+  .code{
+    flex-direction: column;
+  }
   html {
     font-size: 10px;
   }
   .article img {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
   }
-  main {
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    margin-top: 20px;
-
-    align-items: center;
-  }
-  .article {
-    width: 512px;
-    max-width: calc(100% - 30px);
-  }
-  nav {
-    align-items: center;
-  }
+ 
+  
+  
 }
 
-@media only screen and (max-width: 1280px) {
-  nav {
-    font-size: 14px;
-    gap: 5px;
+
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
   }
-  main {
-    margin-bottom: 10px;
+  .article img {
+    height: 150px;
+    width: 150px;
+  }
+ 
+}
+
+
+
+.btn {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 30px;
+  display: flex;
+  white-space: nowrap;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  color: white;
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d3f8ff,
+    #6dd5fa,
+    #70bff3,
+    #6dd5fa,
+    #d3f8ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d3f8ff,
+    #6dd5fa,
+    #70bff3,
+    #6dd5fa,
+    #d3f8ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: 300ms;
+  background-size: 200% 100%;
+  animation: slide 5s linear infinite;
+}
+.btn:hover {
+  box-shadow: 0px 4px 8px rgb(99, 99, 99);
+  scale: 1.1;
+  transform: translate(10%,10%);
+  animation-play-state: paused;
+}
+@keyframes slide {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
   }
 }

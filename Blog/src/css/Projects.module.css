@@ -2,7 +2,7 @@
   width: 100%;
   overflow: scroll;
   overflow-x: hidden;
-  height: calc(100% - 170px);
+  height: calc(100% - 160px);
 
   display: flex;
 
@@ -12,9 +12,10 @@
 }
 .innerPage {
   width: 70%;
-height: auto;
+  height: auto;
   display: flex;
   gap: 10px;
+  border-radius: 6px;
   background-color: #fafafa;
 }
 .innerPage a,
@@ -27,7 +28,6 @@ height: auto;
   color: black;
   height: 30px;
   width: 30px;
- 
 
   display: flex;
   align-items: center;
@@ -39,20 +39,23 @@ height: auto;
 .container {
   width: 50%;
   height: 100%;
- 
+
   overflow: hidden;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+ 
 }
 
 .exampleContainer {
   width: 100%;
   height: 40vh;
   position: relative;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +95,6 @@ height: auto;
   width: 100%;
   object-fit: cover;
   min-width: 512px;
-
   min-height: 288px;
 }
 
@@ -126,38 +128,35 @@ height: auto;
 }
 .tag {
   background-color: #edf6fa;
-  padding: 10px 20px 10px 20px;
+  padding: 8px 20px 8px 20px;
   color: rgb(20, 141, 141);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 1280px) {
   .innerPage {
     width: 90%;
     height: 100%;
-  
   }
-  .exampleContainer img{
+  .exampleContainer img {
     min-width: 100pxpx;
-  
   }
 }
 @media only screen and (max-width: 960px) {
-  .innerPage  {
-
-   flex-direction: column;
+  .innerPage {
+    flex-direction: column;
   }
-  .container{
+  .container {
     width: 100%;
-    height: 100% ;
-  min-height: 400px;}
-  .exampleContainer{
+    height: 100%;
+    min-height: 400px;
+  }
+  .exampleContainer {
     height: 100vh;
   }
-  .exampleContainer img{
-   height: auto;
+  .exampleContainer img {
+    height: auto;
   }
-  .projectInfo{
+  .projectInfo {
     width: 100%;
   }
-  
 }

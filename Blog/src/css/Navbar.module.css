@@ -25,7 +25,7 @@ nav a:hover::after {
 
   z-index: -1;
   animation: 0.5s in-out forwards;
-  background: black;
+  background: white;
  
 
   width: 100%;
@@ -67,7 +67,7 @@ nav a:hover {
 
   z-index: -1;
 
-  background: black; 
+  background: white; 
   
 
   width: 100%;

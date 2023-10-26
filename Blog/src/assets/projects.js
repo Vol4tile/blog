@@ -41,8 +41,8 @@ export const projects = [
   },
   {
     id: 4,
-    images: ["beyefendijs1.png", "beyefendijs2.png"],
-    name: "beyefendi",
+    images: ["beyefendijs2.png", "beyefendijs1.png"],
+    name: "beyefendi.js",
     languages: ["Javascript"],
     description:
       "Bir metindeki istenmeyen kelimelerin tespit edilebildiği istendiğinde ise *** şeklinde sansürlenebildiği bir kütüphanedir.",
@@ -60,7 +60,7 @@ export const projects = [
     githubLink: "https://github.com/Vol4tile/Full-Stack-Blog",
   },
   {
-    id: 5,
+    id: 6,
     images: ["KurumsalWebsite/1.png", "KurumsalWebsite/2.png","KurumsalWebsite/3.png","KurumsalWebsite/4.png","KurumsalWebsite/5.png","KurumsalWebsite/6.png","KurumsalWebsite/7.png"],
     name: "Kurumsal Website",
     languages: ["React","Next","Tailwind"],

@@ -20,7 +20,7 @@ const Post = ({ post }) => {
           <div className={PostCSS.tag}>{post.etiket}</div>
         </div>
         <h1>{post.baslik}</h1>
-        <p>{post.metin.substring(0, 400)}</p>
+        <p>{post.metin.substring(0, 300)}</p>
         <div className={PostCSS.bottomContent}>
           <div className={PostCSS.writer}>
             <div className={PostCSS.writerImage}>
@@ -34,9 +34,7 @@ const Post = ({ post }) => {
           <div
             style={{ opacity: "0.8", display: "flex", alignItems: "center" }}
           >
-            <Link to="../Post" state={{ post }}>
-              Devamını gör
-            </Link>
+            <Link to={`/Post/` + post.id}>Devamını gör</Link>
           </div>
         </div>
       </motion.article>
