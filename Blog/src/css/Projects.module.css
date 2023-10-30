@@ -13,7 +13,7 @@
 .innerPage {
   width: 50%;
   height: auto;
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 3px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 4px;
   display: flex;
   gap: 10px;
   border-radius: 6px;
@@ -67,6 +67,7 @@
   top: calc(50% - 20px);
   position: absolute;
   background: white;
+  color: rgb(20, 141, 141);
   border-radius: 30px;
   width: 40px;
   height: 40px;
@@ -78,7 +79,7 @@
   font-weight: bold;
   font-size: 18px;
   z-index: 2;
-  box-shadow: #c4c4c4 1px 0px 5px 1px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
 }
 
 .next {
@@ -92,12 +93,11 @@
 
 .exampleContainer img {
   position: absolute;
-
+width: 100%;
   height:  100%;
-  object-fit: fill;
-  aspect-ratio: 16/9;
-  min-width: 512px;
-  min-height: 288px;
+  object-fit: contain;
+
+  
 }
 
 .projectInfo {
