@@ -1,5 +1,35 @@
 export const projects = [
   {
+    id: 2,
+    images: ["webrate1.png", "webrate2.png", "webrate3.png"],
+    name: "WebRate",
+    languages: ["React", "Express", "Node", "MongoDB"],
+    description:
+      "Kullanıcıların web sitelerindeki deneyimleri puanlayıp yorum yapabildikleri ve en iyi sitelerin listelendiği bir platform.",
+    createDate: "1 Nisan 2023",
+    githubLink: "https://github.com/Vol4tile/Webrate",
+  },
+  {
+    id: 6,
+    images: ["KurumsalWebsite/1.png", "KurumsalWebsite/2.png","KurumsalWebsite/3.png","KurumsalWebsite/4.png","KurumsalWebsite/5.png","KurumsalWebsite/6.png","KurumsalWebsite/7.png"],
+    name: "Kurumsal Website",
+    languages: ["React","Next","Tailwind"],
+    description:
+      "Ürün tanıtımı ve fiyatlandırma hakkında bilgi veren kurumsal website",
+    createDate: "1 Ağustos 2023",
+    githubLink: "https://github.com/Vol4tile/Corporate-website",
+  },
+  {
+    id: 5,
+    images: ["FullStackBlog/1.png", "FullStackBlog/2.png","FullStackBlog/3.png","FullStackBlog/4.png","FullStackBlog/5.png","FullStackBlog/6.png","FullStackBlog/7.png","FullStackBlog/8.png"],
+    name: "Full Stack Blog",
+    languages: ["React","Express","Node"],
+    description:
+      "Kaydolup paylaşım yapılabilen jwt doğrulama kullanan basit bir blog",
+    createDate: "30 Haziran 2023",
+    githubLink: "https://github.com/Vol4tile/Full-Stack-Blog",
+  },
+  {
     id: 0,
     images: ["payplatkaydol.png", "payplatanasayfa.png", "payplatgrup.png"],
     name: "Payplat",
@@ -19,16 +49,7 @@ export const projects = [
     createDate: "18 Ağustos 2022",
     githubLink: "https://github.com/Vol4tile/ClassyCodes",
   },
-  {
-    id: 2,
-    images: ["webrate1.png", "webrate2.png", "webrate3.png"],
-    name: "WebRate",
-    languages: ["React", "Express", "Node", "MongoDB"],
-    description:
-      "Kullanıcıların web sitelerindeki deneyimleri puanlayıp yorum yapabildikleri ve en iyi sitelerin listelendiği bir platform.",
-    createDate: "1 Nisan 2023",
-    githubLink: "https://github.com/Vol4tile/Webrate",
-  },
+ 
   {
     id: 3,
     images: ["wbdesktop1.png", "wbdesktop2.png"],
@@ -49,24 +70,6 @@ export const projects = [
     createDate: "5 Nisan 2023",
     githubLink: "https://github.com/Vol4tile/beyefendi.js",
   },
-  {
-    id: 5,
-    images: ["FullStackBlog/1.png", "FullStackBlog/2.png","FullStackBlog/3.png","FullStackBlog/4.png","FullStackBlog/5.png","FullStackBlog/6.png","FullStackBlog/7.png","FullStackBlog/8.png"],
-    name: "Full Stack Blog",
-    languages: ["React","Express","Node"],
-    description:
-      "Kaydolup paylaşım yapılabilen jwt doğrulama kullanan basit bir blog",
-    createDate: "30 Haziran 2023",
-    githubLink: "https://github.com/Vol4tile/Full-Stack-Blog",
-  },
-  {
-    id: 6,
-    images: ["KurumsalWebsite/1.png", "KurumsalWebsite/2.png","KurumsalWebsite/3.png","KurumsalWebsite/4.png","KurumsalWebsite/5.png","KurumsalWebsite/6.png","KurumsalWebsite/7.png"],
-    name: "Kurumsal Website",
-    languages: ["React","Next","Tailwind"],
-    description:
-      "Ürün tanıtımı ve fiyatlandırma hakkında bilgi veren kurumsal website",
-    createDate: "1 Ağustos 2023",
-    githubLink: "https://github.com/Vol4tile/Corporate-website",
-  },
+
+
 ];
