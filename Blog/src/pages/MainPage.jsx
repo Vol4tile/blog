@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import MainCSS from "../css/Main.module.css";
 import { motion, useAnimation } from "framer-motion";
 import changeMetaTags from "../utils/changeMetaTags";
-import photo from "../assets/ilkanErdogan.png";
+import photo from "../assets/illustrator.jpg";
 import { useRef } from "react";
 import "../../node_modules/highlight.js/styles/lightfair.css";
 import hljs from "highlight.js";
