@@ -89,3 +89,15 @@
 }
 
 
+@media only screen and (max-width: 1000px) {
+  .container{
+    height: auto;
+  }
+  .innerContainer {
+  flex-direction: column;
+   
+  }
+  .cardContainer{
+    width: 100%;
+  }
+}

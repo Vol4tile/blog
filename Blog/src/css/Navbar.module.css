@@ -82,3 +82,12 @@ nav a:hover {
     gap: 5px;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  nav {
+    font-size: 10px !important;
+    max-width: 90%;
+    font-weight: 600;
+   
+  }
+}
