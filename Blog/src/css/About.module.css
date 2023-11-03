@@ -94,8 +94,12 @@
     height: auto;
   }
   .innerContainer {
+    box-shadow: none;
   flex-direction: column;
    
+  }
+  .aboutContainer{
+    border-radius: 15px;
   }
   .cardContainer{
     width: 100%;
