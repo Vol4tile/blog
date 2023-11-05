@@ -92,14 +92,16 @@
 @media only screen and (max-width: 1000px) {
   .container{
     height: auto;
+    border-radius: 0px;
   }
   .innerContainer {
     box-shadow: none;
   flex-direction: column;
+  border-radius: 0px;
    
   }
   .aboutContainer{
-    border-radius: 15px;
+    border-radius: 0px;
   }
   .cardContainer{
     width: 100%;

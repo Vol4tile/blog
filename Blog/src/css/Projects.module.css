@@ -40,27 +40,42 @@
 }
 .container {
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   padding: 10px;
 
-  margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  justify-content: center;
+  
   max-width: 90%; /* Maksimum genişlik belirleyebilirsiniz */
 margin: auto;
  
 }
-.item{
-  transition: 300ms;
- 
+.modalContent{
+  width: 100%;
+  height: 100%;
+}
+.modalContainer{
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .exampleContainer {
   width: 100%;
-  height: 40vh;
+  height: 100%;
   position: relative;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -103,7 +118,7 @@ margin: auto;
   position: absolute;
 width: 100%;
   height:  100%;
-  object-fit: contain;
+  object-fit: cover;
 
   
 }
@@ -181,74 +196,45 @@ width: 100%;
 .images img:hover{
   scale: 1;
 }
-@media only screen and (max-width: 1280px) {
-  
-  .innerPage {
-    width: 90%;
-    height: 100%;
-  }
-  .exampleContainer img {
-    min-width: 100pxpx;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .innerPage {
-    flex-direction: column;
-  }
-  .container {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-  }
-  .exampleContainer {
-    height: 100vh;
-  }
-  .exampleContainer img {
-    height: auto;
-  }
-  .projectInfo {
-    width: 100%;
-  }
-}
+
 
 
 
 .modal {
+  
   position: fixed;
   top: 15%;
   left: 15%;
   width: 70%;
   height: 70%;
+  max-height: 70%;
   transition: 100ms;
- 
+  border-radius: 30px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
  
+  .modal img{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    object-fit:contain;
+   
+  }
 }
 
 
-/* Modal Content */
-.modalContent {
-  
-  border-radius: 8px;
-  padding: 20px;
-  
-  text-align: center;
-  position: relative;
-}
 .modal img{
+ 
   max-width: 100%;
   max-height: 100%;
 }
 
 /* Close Button */
-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}

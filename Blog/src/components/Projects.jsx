@@ -1,90 +1,28 @@
 import React, { useState } from "react";
 import ProjectsCSS from "../css/Projects.module.css";
-import { motion, AnimatePresence } from "framer-motion";
+
 import { IoMdFolder } from "react-icons/io";
 import { AiFillGithub } from "react-icons/ai";
-import { wrap } from "popmotion";
+
 import Modal from "./Modal"; // Modal bileşenini içe aktarın
 const Project = ({ project }) => {
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const [selectedImage, setSelectedImage] = useState(-1);
+  const [selectedImages, setSelectedImages] = useState(null);
+  const openModal = (key,images) => {
+    setSelectedImage(key);
+    setSelectedImages(images);
   };
 
   const closeModal = () => {
-    setSelectedImage(null);
+    setSelectedImage(-1);
+    setSelectedImages(null);
   };
-  const variants = {
-    enter: (direction) => {
-      return {
-        x: direction > 0 ? 1000 : -1000,
-        opacity: 0,
-      };
-    },
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction) => {
-      return {
-        zIndex: 0,
-        x: direction < 0 ? 1000 : -1000,
-        opacity: 0,
-      };
-    },
-  };
-  const swipeConfidenceThreshold = 10000;
-  const [[page, direction], setPage] = useState([0, 0]);
-
-  const imageIndex = wrap(0, project.images.length, page);
-  const paginate = (newDirection) => {
-    setPage([page + newDirection, newDirection]);
-  };
-  const swipePower = (offset, velocity) => {
-    return Math.abs(offset) * velocity;
-  };
+ 
+ 
 
   return (
     <div className={ProjectsCSS.innerPage}>
-      {/* <div className={ProjectsCSS.container}>
-        <div className={ProjectsCSS.exampleContainer}>
-          <AnimatePresence initial={false} custom={direction}>
-            <motion.img
-              key={page}
-              src={project.images[imageIndex]}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 },
-              }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
-
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
-            />
-          </AnimatePresence>
-          <div className={ProjectsCSS.next} onClick={() => paginate(1)}>
-            {"‣"}
-          </div>
-          <div className={ProjectsCSS.prev} onClick={() => paginate(-1)}>
-            {"‣"}
-          </div>
-        </div>
-            </div>*/}
+    
       <div className={ProjectsCSS.projectInfo}>
         <div className={ProjectsCSS.titles}>
           <div className={ProjectsCSS.name}>
@@ -113,13 +51,13 @@ const Project = ({ project }) => {
         <div className={ProjectsCSS.images}>
           {project.images.map((image,key)=>{
             return(
-              <img src={image} key={key} alt=""   onClick={() => openModal(image)} />
+              <img src={image} key={key} alt=""   onClick={() => openModal(key,project.images)} />
             )
           })}
         </div>
       </div>
-      {selectedImage && (
-        <Modal image={selectedImage}  onClose={closeModal} />
+      {selectedImage>=0 && (
+        <Modal image={selectedImage} images={selectedImages}  onClose={closeModal} />
       )}
     </div>
   );
