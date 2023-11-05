@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import ProjectsCSS from "../css/Projects.module.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { IoMdFolder } from "react-icons/io";
 import { AiFillGithub } from "react-icons/ai";
 import { wrap } from "popmotion";
+import Modal from "./Modal"; // Modal bileşenini içe aktarın
 const Project = ({ project }) => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
   const variants = {
     enter: (direction) => {
       return {
@@ -37,7 +48,7 @@ const Project = ({ project }) => {
 
   return (
     <div className={ProjectsCSS.innerPage}>
-      <div className={ProjectsCSS.container}>
+      {/* <div className={ProjectsCSS.container}>
         <div className={ProjectsCSS.exampleContainer}>
           <AnimatePresence initial={false} custom={direction}>
             <motion.img
@@ -73,10 +84,16 @@ const Project = ({ project }) => {
             {"‣"}
           </div>
         </div>
-      </div>
+            </div>*/}
       <div className={ProjectsCSS.projectInfo}>
-        <div className={ProjectsCSS.name}>
-          <h1>{project.name}</h1>
+        <div className={ProjectsCSS.titles}>
+          <div className={ProjectsCSS.name}>
+            <IoMdFolder fill="rgb(20, 141, 141" /> <h2>{project.name}</h2>
+          </div>
+          <a href={project.githubLink} target="_blank">
+            {" "}
+            <AiFillGithub fill="rgb(20, 141, 141" />
+          </a>
         </div>
         <div className={ProjectsCSS.tags}>
           {project.languages.map((tag, key) => {
@@ -92,13 +109,18 @@ const Project = ({ project }) => {
         </div>
         <div className={ProjectsCSS.date}>
           <span>{project.createDate}</span>
-
-          <a href={project.githubLink} target="_blank">
-            {" "}
-            <AiFillGithub/>
-          </a>
+        </div>
+        <div className={ProjectsCSS.images}>
+          {project.images.map((image,key)=>{
+            return(
+              <img src={image} key={key} alt=""   onClick={() => openModal(image)} />
+            )
+          })}
         </div>
       </div>
+      {selectedImage && (
+        <Modal image={selectedImage}  onClose={closeModal} />
+      )}
     </div>
   );
 };

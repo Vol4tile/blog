@@ -11,13 +11,14 @@
   flex-direction: column;
 }
 .innerPage {
-  width: 50%;
+ width: 100%;
   height: auto;
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 4px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
   display: flex;
   gap: 10px;
   border-radius: 6px;
-  background-color: #fafafa;
+  background-color: black;
+  color:rgb(20, 141, 141) ;
 }
 .innerPage a,
 .innerPage a:hover,
@@ -38,15 +39,22 @@
   color: rgb(20, 141, 141);
 }
 .container {
-  width: 50%;
+  width: 100%;
   height: 100%;
-
   overflow: hidden;
-  padding: 0;
+  padding: 10px;
+
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
   justify-content: center;
-  align-items: center;
+  max-width: 90%; /* Maksimum genişlik belirleyebilirsiniz */
+margin: auto;
+ 
+}
+.item{
+  transition: 300ms;
  
 }
 
@@ -101,7 +109,7 @@ width: 100%;
 }
 
 .projectInfo {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -110,7 +118,18 @@ width: 100%;
   padding: 10px;
 }
 .projectsName {
+ 
   width: 100%;
+}
+.titles{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .date {
   display: flex;
@@ -120,21 +139,50 @@ width: 100%;
 }
 .tags {
   width: 100%;
-  overflow-y: auto;
+ 
   display: flex;
   flex-wrap: wrap;
   height: auto;
-  flex-direction: row;
+ 
 
   gap: 5px;
 }
 .tag {
-  background-color: #edf6fa;
+
   padding: 8px 20px 8px 20px;
   color: rgb(20, 141, 141);
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
   border-radius: 10px;
 }
+
+.images{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+
+  margin: 0;
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+
+ 
+ 
+
+}
+.images img{
+  border-radius: 10px;
+  max-width: 100%;
+  height:auto;
+  transition: 400ms;
+  scale: 0.9;
+}
+.images img:hover{
+  scale: 1;
+}
 @media only screen and (max-width: 1280px) {
+  
   .innerPage {
     width: 90%;
     height: 100%;
@@ -161,4 +209,46 @@ width: 100%;
   .projectInfo {
     width: 100%;
   }
+}
+
+
+
+.modal {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  transition: 100ms;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+ 
+}
+
+
+/* Modal Content */
+.modalContent {
+  
+  border-radius: 8px;
+  padding: 20px;
+  
+  text-align: center;
+  position: relative;
+}
+.modal img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Close Button */
+button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
