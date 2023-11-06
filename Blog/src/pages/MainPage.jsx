@@ -6,6 +6,7 @@ import photo from "../assets/illustrator.jpg";
 import { useRef } from "react";
 import "../../node_modules/highlight.js/styles/lightfair.css";
 import hljs from "highlight.js";
+import {CiMail} from "react-icons/ci"
 
 const MainPage = () => {
   const [developerText, setDeveloperText] = useState("");
@@ -18,7 +19,7 @@ const MainPage = () => {
   ];
   const [charIndex, setCharIndex] = useState(0);
   const [codeText, setCodeText] = useState("");
-  const textToType = "✉ Bana Ulaş";
+  const textToType = "Bana Ulaş";
   const [textIndex, setTextIndex] = useState(0);
   const imgControls = useAnimation(); // Resim için animasyon kontrolü
   const infoControls = useAnimation(); // Bilgi divi için animasyon kontrolü
@@ -65,7 +66,7 @@ const MainPage = () => {
     const language = "html";
     const codeToHighlight = `
       <button className={styles.btn}>
-        ${codeText}
+       ${codeText}
       </button>
     `;
 
@@ -114,6 +115,7 @@ const MainPage = () => {
                 overflow: "hidden",
               }}
             >
+             
               <code
                 className=" language-html "
                 style={{ height: "300px", margin: "0", padding: "0" }}
@@ -123,7 +125,7 @@ const MainPage = () => {
 
             <div>
               <button className={MainCSS.btn} onClick={sendEmail}>
-                {codeText}
+             < CiMail size={20} fill="white"/>{codeText}
               </button>
             </div>
           </div>

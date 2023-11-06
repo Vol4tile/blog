@@ -170,10 +170,17 @@ main {
     font-size: 6px;
   
   }
+
   .code{
     max-width: 100vw;
     overflow: hidden;
   }
-
+  .me{gap: 0px;}
+  .info{
+   padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 }
