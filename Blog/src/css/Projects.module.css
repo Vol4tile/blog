@@ -3,7 +3,7 @@
   overflow: scroll;
   overflow-x: hidden;
   height: calc(100% - 160px);
- 
+  font-size: large;
   display: flex;
   padding: 5px;
   gap: 10px;
@@ -11,14 +11,15 @@
   flex-direction: column;
 }
 .innerPage {
- width: 100%;
+  width: 100%;
   height: auto;
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
+    rgb(20, 141, 141) 0px 0px 1px 0px;
   display: flex;
   gap: 10px;
   border-radius: 6px;
   background-color: black;
-  color:rgb(20, 141, 141) ;
+  color: rgb(20, 141, 141);
 }
 .innerPage a,
 .innerPage a:hover,
@@ -47,27 +48,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  
+
   max-width: 90%; /* Maksimum genişlik belirleyebilirsiniz */
-margin: auto;
- 
+  margin: auto;
 }
-.modalContent{
+.modalContent {
   width: 100%;
   height: 100%;
 }
-.modalContainer{
+.modalContainer {
   width: 100%;
   height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .container {
     grid-template-columns: 1fr;
   }
@@ -102,7 +102,8 @@ margin: auto;
   font-weight: bold;
   font-size: 18px;
   z-index: 2;
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
+    rgb(20, 141, 141) 0px 0px 1px 0px;
 }
 
 .next {
@@ -116,11 +117,9 @@ margin: auto;
 
 .exampleContainer img {
   position: absolute;
-width: 100%;
-  height:  100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-
-  
 }
 
 .projectInfo {
@@ -133,15 +132,14 @@ width: 100%;
   padding: 10px;
 }
 .projectsName {
- 
   width: 100%;
 }
-.titles{
+.titles {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.name{
+.name {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,23 +152,22 @@ width: 100%;
 }
 .tags {
   width: 100%;
- 
+
   display: flex;
   flex-wrap: wrap;
   height: auto;
- 
 
   gap: 5px;
 }
 .tag {
-
   padding: 8px 20px 8px 20px;
   color: rgb(20, 141, 141);
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
+    rgb(20, 141, 141) 0px 0px 1px 0px;
   border-radius: 10px;
 }
 
-.images{
+.images {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -180,28 +177,19 @@ width: 100%;
   display: grid;
   cursor: pointer;
   grid-template-columns: 1fr 1fr 1fr;
- 
-
- 
- 
-
 }
-.images img{
+.images img {
   border-radius: 10px;
   max-width: 100%;
-  height:auto;
+  height: auto;
   transition: 400ms;
   scale: 0.9;
 }
-.images img:hover{
+.images img:hover {
   scale: 1;
 }
 
-
-
-
 .modal {
-  
   position: fixed;
   top: 15%;
   left: 15%;
@@ -215,24 +203,24 @@ width: 100%;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
+    rgb(20, 141, 141) 0px 0px 1px 0px;
   padding: 0;
   margin: 0;
 }
 @media (max-width: 768px) {
- 
-  .modal img{
+  .container{
+    font-size: larger;
+  }
+  .modal img {
     height: 100%;
     width: 100%;
     background-color: black;
-    object-fit:contain;
-   
+    object-fit: contain;
   }
 }
 
-
-.modal img{
- 
+.modal img {
   max-width: 100%;
   max-height: 100%;
 }

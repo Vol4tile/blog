@@ -98,7 +98,7 @@
     box-shadow: none;
   flex-direction: column;
   border-radius: 0px;
-   
+   font-size: small;
   }
   .aboutContainer{
     border-radius: 0px;
@@ -107,3 +107,5 @@
     width: 100%;
   }
 }
+
+

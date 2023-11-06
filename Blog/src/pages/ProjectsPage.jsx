@@ -24,16 +24,7 @@ const ProjectsPage = () => {
     }
   }
   return (
-   /* <motion.div
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      exit={{ opacity: 0 }}
-      className={ProjectsCSS.page}
-    >
-      {projects.map((project) => {
-        return <Project project={project} key={project.id} />;
-      })}
-    </motion.div>*/
+ 
 
     <motion.ul
     className={ProjectsCSS.container}

@@ -8,7 +8,7 @@ const Modal = ({ image, images, onClose }) => {
   const [[page, direction], setPage] = useState([image, 1]);
 
   const imageIndex = wrap(0, images.length, page);
- 
+
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
@@ -16,9 +16,7 @@ const Modal = ({ image, images, onClose }) => {
     return Math.abs(offset) * velocity;
   };
   const modalRef = useRef();
-useEffect(()=>{console.log(page,imageIndex);},[page,imageIndex])
-useEffect(()=>{console.log(image);},[image])
-  // Modal dışına tıklamalara yanıt vermek için bir event dinleyici ekleyin
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -61,7 +59,7 @@ useEffect(()=>{console.log(image);},[image])
           <div className={ProjectsCSS.exampleContainer}>
             <AnimatePresence initial={false} custom={direction}>
               <motion.img
-                key={page} // imageIndex yerine page kullanın
+                key={page}
                 src={images[imageIndex]}
                 custom={direction}
                 variants={variants}

@@ -3,5 +3,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: calc(100% - 210px);
+    color: white;
+    height: calc(100% - 160px);
+}
+.container a,.container a:visited,.container a:hover{
+    color: rgb(20, 141, 141);
 }

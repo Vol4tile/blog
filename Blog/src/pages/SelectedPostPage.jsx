@@ -6,13 +6,22 @@ import SelectedPostPageCSS from "../css/SelectedPostPage.module.css";
 import { allPosts } from "../assets/posts";
 const SelectedPostPage = () => {
   const { postId } = useParams();
-  const post = allPosts.find((item) => 
-    (item.id) === parseInt(postId)
-  );
-  console.log(post.paylasimResmi);
+  const post = allPosts.find((item) => item.id === parseInt(postId));
+
   if (!post) {
-    // Eğer yazı bulunamazsa, uygun bir işlem yapabilirsiniz
-    return <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"calc(100% - 170px)",color:"white"}}>Yazı bulunamadı.</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "calc(100% - 170px)",
+          color: "white",
+        }}
+      >
+        Yazı bulunamadı.
+      </div>
+    );
   }
   return (
     <motion.article
@@ -34,7 +43,7 @@ const SelectedPostPage = () => {
         <div className={SelectedPostPageCSS.bottomContent}>
           <div className={SelectedPostPageCSS.writer}>
             <div className={SelectedPostPageCSS.writerImage}>
-              <img  src={`/${post.paylasanResmi}`}  alt={post.paylasanAdi} />
+              <img src={`/${post.paylasanResmi}`} alt={post.paylasanAdi} />
             </div>
             <div className={SelectedPostPageCSS.writerInfo}>
               <div>{post.paylasanAdi}</div>
@@ -48,7 +57,6 @@ const SelectedPostPage = () => {
               alignItems: "center",
             }}
           ></div>
-         
         </div>
       </div>
     </motion.article>

@@ -61,9 +61,7 @@ const MainPage = () => {
     }, 100);
     return () => clearInterval(interval);
   }, [charIndex, textIndex]);
-
   useEffect(() => {
-    // Kodu belirtilen dil ile renklendirin
     const language = "html";
     const codeToHighlight = `
       <button className={styles.btn}>
@@ -71,9 +69,10 @@ const MainPage = () => {
       </button>
     `;
 
-    const highlightedCode = hljs.highlight(language, codeToHighlight).value;
+    const options = { language };
 
-    // Renklendirilmiş kodu ekrana ekleyin
+    const highlightedCode = hljs.highlight(codeToHighlight, options).value;
+
     kodRef.current.innerHTML = highlightedCode;
   }, [codeText]);
   const sendEmail = () => {
@@ -102,7 +101,7 @@ const MainPage = () => {
               <div className={MainCSS.title}>{developerText}|</div>
             </div>
           </div>
-          <div className={MainCSS.code} >
+          <div className={MainCSS.code}>
             <pre
               style={{
                 height: "100px",
@@ -123,7 +122,9 @@ const MainPage = () => {
             </pre>
 
             <div>
-              <button className={MainCSS.btn}  onClick={sendEmail}>{codeText}</button>
+              <button className={MainCSS.btn} onClick={sendEmail}>
+                {codeText}
+              </button>
             </div>
           </div>
         </motion.article>

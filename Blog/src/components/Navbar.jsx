@@ -32,14 +32,6 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/Posts"
-            className={({ isActive, isPending }) =>
-              isPending ? NavbarCSS.pending : isActive ? NavbarCSS.active : ""
-            }
-          >
-            Paylaşımlar
-          </NavLink>
-          <NavLink
             to="/CV"
             className={({ isActive, isPending }) =>
               isPending ? NavbarCSS.pending : isActive ? NavbarCSS.active : ""
@@ -47,7 +39,6 @@ const Navbar = () => {
           >
             CV
           </NavLink>
-         
         </nav>
       </header>
     </>
