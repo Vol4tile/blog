@@ -1,40 +1,46 @@
 .container {
- max-width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
   position: relative;
-  overflow: hidden;
+
 }
-.innerContainer{
+.innerContainer {
+ 
+width: fit-content;
+margin: auto;
   position: relative;
+
+
 }
-.container :first-child{
-  border-radius: 10px;
+object{
+  height: 100%;
+  width: 100%;
+ 
+
+}
+object img{
+  border-radius: 20px;
   max-width: 100%;
-  margin: auto;
-
 }
-
-.downBtn{
+.downBtn {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
   z-index: 99;
   transition: 400ms;
+}
+.downBtn:hover {
+  fill: rgb(20, 141, 141);
+}
 
-}
-.downBtn:hover{
-fill: rgb(20, 141, 141);
-}
-@media only screen and (max-width: 600px) {
-  .container :first-child{
-    width: 100vw;
-    border-radius: 0px;
-    
-  
-  }
 
-}
+@media only screen and (max-width: 590px) {
+  object img{
+    border-radius: 0;
+   
+  }}

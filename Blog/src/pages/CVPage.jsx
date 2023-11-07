@@ -3,15 +3,10 @@ import React, { useEffect } from "react";
 import PDFFile from "../assets/ilkanCV.pdf";
 import CVCSS from "../css/CV.module.css";
 import { motion } from "framer-motion";
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
+import PDFImage from "../assets/pdfimage.png"
 import changeMetaTags from "../utils/changeMetaTags";
 import {SlCloudDownload} from "react-icons/sl"
-import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
-  import.meta.url,
-).toString();
+
 
 const CVPage = () => {
   const downloadPDF = () => {
@@ -31,12 +26,15 @@ const CVPage = () => {
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
       
-      ><div   className={CVCSS.innerContainer}>
-           <Document file={PDFFile} >
-        <Page pageNumber={1}  />
-      </Document>
-      <SlCloudDownload className={CVCSS.downBtn} size={20} fill="gray"   onClick={downloadPDF}/>
-      </div>
+      >
+      
+
+        
+        <object data={PDFFile} type="application/pdf" >
+        <div   className={CVCSS.innerContainer}><img src={PDFImage}  ></img> <SlCloudDownload className={CVCSS.downBtn} size={20} fill="gray"   onClick={downloadPDF}/></div>
+</object>
+      
+     
        </motion.div>
     </>
   );
