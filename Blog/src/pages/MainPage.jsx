@@ -4,11 +4,14 @@ import { motion, useAnimation } from "framer-motion";
 import changeMetaTags from "../utils/changeMetaTags";
 import photo from "../assets/illustrator.jpg";
 import { useRef } from "react";
-import "../../node_modules/highlight.js/styles/lightfair.css";
-import hljs from "highlight.js";
-import {CiMail} from "react-icons/ci"
 
+import hljs from "highlight.js";
+import { CiMail } from "react-icons/ci";
+import { useTheme } from "../context/ThemeContext";
+import "../../node_modules/highlight.js/styles/lightfair.css";
+import "../../node_modules/highlight.js/styles/dark.css";
 const MainPage = () => {
+  const { isDarkMode, toggleTheme } = useTheme();
   const [developerText, setDeveloperText] = useState("");
   const kodRef = useRef();
 
@@ -23,7 +26,29 @@ const MainPage = () => {
   const [textIndex, setTextIndex] = useState(0);
   const imgControls = useAnimation(); // Resim için animasyon kontrolü
   const infoControls = useAnimation(); // Bilgi divi için animasyon kontrolü
+  useEffect(() => {
+    const loadStyles = () => {
+      // Tema değişikliğine göre stil dosyalarını yükleyin
+      const styleLink = document.getElementById("highlight-styles");
 
+      if (styleLink) {
+        styleLink.href = isDarkMode
+          ? "../../node_modules/highlight.js/styles/dark.css"
+          : "../../node_modules/highlight.js/styles/lightfair.css";
+      } else {
+        const newStyleLink = document.createElement("link");
+        newStyleLink.rel = "stylesheet";
+        newStyleLink.type = "text/css";
+        newStyleLink.id = "highlight-styles";
+        newStyleLink.href = isDarkMode
+          ? "../../node_modules/highlight.js/styles/dark.css"
+          : "../../node_modules/highlight.js/styles/lightfair.css";
+        document.head.appendChild(newStyleLink);
+      }
+    };
+
+    loadStyles();
+  }, [isDarkMode]);
   useEffect(() => {
     changeMetaTags({ title: "Anasayfa" });
   }, []);
@@ -81,7 +106,7 @@ const MainPage = () => {
   };
   return (
     <>
-      <main>
+      <main className={isDarkMode ? MainCSS.darkMain : MainCSS.lightMain}>
         <motion.article
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
@@ -103,19 +128,7 @@ const MainPage = () => {
             </div>
           </div>
           <div className={MainCSS.code}>
-            <pre
-              style={{
-                height: "100px",
-                width: "380px",
-                backgroundColor: "#1F2833",
-                borderRadius: "10px",
-                paddingLeft: "5px",
-                fontSize: "15px",
-                marginTop: "0",
-                overflow: "hidden",
-              }}
-            >
-             
+            <pre className={isDarkMode ? MainCSS.darkPre : MainCSS.lightPre}>
               <code
                 className=" language-html "
                 style={{ height: "300px", margin: "0", padding: "0" }}
@@ -125,7 +138,8 @@ const MainPage = () => {
 
             <div>
               <button className={MainCSS.btn} onClick={sendEmail}>
-             < CiMail size={20} fill="white"/>{codeText}
+                <CiMail size={20} fill="white" />
+                {codeText}
               </button>
             </div>
           </div>

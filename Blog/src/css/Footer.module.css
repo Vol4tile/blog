@@ -6,9 +6,23 @@ footer {
   justify-content: center;
   align-items: center;
  
-  color: white;
-  opacity: 0.7;
   
+
+  
+}
+.darkFooter{
+background-color: black;
+color: white;
+}
+.darkFooter a{
+  color: white;
+}
+.lightFooter{
+  background-color: white;
+  color: black;
+}
+.lightFooter a{
+  color: black;
 }
 .socialMedias {
   width: auto;
@@ -31,7 +45,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
+ 
 }
 .copyright{
 
@@ -40,3 +54,13 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.toggle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+

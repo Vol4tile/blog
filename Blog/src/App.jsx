@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 
 const App = () => {
+  
   return (
     <>
       <BrowserRouter>

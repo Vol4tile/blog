@@ -1,11 +1,26 @@
 import React from "react";
 import NavbarCSS from "../css/Navbar.module.css";
 import { NavLink } from "react-router-dom";
+import { useTheme } from "../context/ThemeContext";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
+import {AiOutlineDown} from "react-icons/ai"
 const Navbar = () => {
+  const { isDarkMode, toggleTheme } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
-      <header>
-        <nav>
+      <header
+        className={isDarkMode ? NavbarCSS.darkHeader : NavbarCSS.lightHeader}
+      >
+        {!isMenuOpen && <div className={NavbarCSS.hamburger} onClick={handleToggleMenu}>
+          <RxHamburgerMenu size={16} />
+        </div>}
+        <nav className={`${isMenuOpen ? NavbarCSS.openNav : ""}`}>
           <NavLink
             to="/"
             className={({ isActive, isPending }) =>
@@ -39,6 +54,7 @@ const Navbar = () => {
           >
             CV
           </NavLink>
+          {isMenuOpen && <div className={NavbarCSS.up} onClick={handleToggleMenu}><AiOutlineDown size={16}/></div>}
         </nav>
       </header>
     </>

@@ -4,13 +4,15 @@ import IlkanLogo from "../assets/ilkanErdogan.png";
 import { motion } from "framer-motion";
 import changeMetaTags from "../utils/changeMetaTags";
 import { useEffect } from "react";
+import { useTheme } from "../context/ThemeContext";
 const AboutPage = () => {
+  const { isDarkMode, toggleTheme } = useTheme();
   useEffect(() => {
     changeMetaTags({ title: "Hakkımda" });
   }, []);
   return (
     <motion.div
-      className={AboutCSS.container}
+      className={`${AboutCSS.container } ${isDarkMode ? AboutCSS.darkContainer : AboutCSS.lightContainer }`}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}

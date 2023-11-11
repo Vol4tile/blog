@@ -1,14 +1,22 @@
 .page {
   width: 100%;
-  overflow: scroll;
-  overflow-x: hidden;
-  height: calc(100% - 160px);
+  overflow: hidden;
+
+  min-height: calc(100% - 160px);
   font-size: large;
   display: flex;
   padding: 5px;
   gap: 10px;
   align-items: center;
   flex-direction: column;
+}
+.darkPage {
+  color: white;
+  background-color: black;
+}
+.lightPage {
+  color: black;
+  background-color: white;
 }
 .innerPage {
   width: 100%;
@@ -18,8 +26,14 @@
   display: flex;
   gap: 10px;
   border-radius: 6px;
-  background-color: black;
+
   color: rgb(20, 141, 141);
+}
+.darkPage .container {
+  background-color: black;
+}
+.lightPage .container {
+  background-color: white;
 }
 .innerPage a,
 .innerPage a:hover,
@@ -44,7 +58,7 @@
   height: auto;
   overflow: hidden;
   padding: 10px;
-
+  list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
@@ -52,6 +66,7 @@
   max-width: 90%; /* Maksimum genişlik belirleyebilirsiniz */
   margin: auto;
 }
+
 .modalContent {
   width: 100%;
   height: 100%;
@@ -70,6 +85,9 @@
 @media (max-width: 800px) {
   .container {
     grid-template-columns: 1fr;
+
+    padding: 5px;
+    max-width: 100%;
   }
 }
 
@@ -157,7 +175,7 @@
   flex-wrap: wrap;
   height: auto;
 
-  gap: 5px;
+  gap: 10px;
 }
 .tag {
   padding: 8px 20px 8px 20px;
@@ -209,8 +227,8 @@
   margin: 0;
 }
 @media (max-width: 768px) {
-  .container{
-    font-size: larger;
+  .container {
+    font-size: 16px;
   }
   .modal img {
     height: 100%;

@@ -4,21 +4,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+.darkContainer{
+  background-color: black;
+  color: #686d83;
+}
+.lightContainer{
+  background-color: white;
   color: #686d83;
 }
 .innerContainer {
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 4px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 2px, rgb(20, 141, 141)  0px 0px 1px 2px;
   display: flex;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .innerContainer h3 {
+  line-height: 30px;
+  letter-spacing: 0.6px;
+  font-size: 26px;
+  font-weight: 900;
   margin: 10px 0;
 }
 
 .innerContainer h6 {
   margin: 5px 0;
+  line-height: 30px;
+  letter-spacing: 0.6px;
+
+  font-weight: 900;
   text-transform: uppercase;
 }
 
@@ -45,7 +61,7 @@
   padding: 7px;
   height: 128px;
   width: 128px;
-  object-fit: inherit;
+  object-fit: cover;
 }
 
 .skills {
@@ -70,7 +86,10 @@
 
  
   display: inline-block;
-  font-size: 12px;
+  line-height: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.3px;
   margin: 0 7px 7px 0;
   padding: 7px;
 }
@@ -84,8 +103,10 @@
 }
 .aboutContainer p {
   width: 80%;
-  word-wrap: break-word;
-  white-space: normal;
+
+  line-height: 25px;
+  letter-spacing: 0.3px;
+ 
 }
 
 
