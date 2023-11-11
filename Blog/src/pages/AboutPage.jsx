@@ -12,7 +12,9 @@ const AboutPage = () => {
   }, []);
   return (
     <motion.div
-      className={`${AboutCSS.container } ${isDarkMode ? AboutCSS.darkContainer : AboutCSS.lightContainer }`}
+      className={`${AboutCSS.container} ${
+        isDarkMode ? AboutCSS.darkContainer : AboutCSS.lightContainer
+      }`}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
@@ -40,20 +42,20 @@ const AboutPage = () => {
         </div>
         <div className={AboutCSS.aboutContainer}>
           <p>
-            Merhaba ben İlkan. Zonguldak Bülent Ecevit Üniversitesi Bilgisayar
-            Mühendisliği bölümünden mezunum. Yaklaşık 4 senedir yazılımla
-            ilgilenmekteyim. Yazılıma c ile başlayarak algoritma becerilerimi
-            geliştirdim. Devamında ise C# ile windows form uygulamalarıyla
-            ilgilendim. Full Stack geliştirmeye ilk olarak Html Css javascript
-            öğrenerek başladım Ardında Php ve Jquery ile ilk full stack projemi
-            geliştirdim. Yaklaşık 2 senedir React ve Express ile geliştirmeler
-            yapmaktayım. Şuanda Next ve TypeScript yeteneklerimi geliştirmeye
-            çalışıyorum. Bir süre python ile yapay zeka projeleriyle uğraştım.
-            Her geçen gün kendini yazılım alanında geliştirmeye çalışıyorum.
-            Yazılımda en çok ilgi duyduğum ve kendini geliştirdim alan web
-            geliştirmedir. Database olarak MongoDb,MySql,PostgreSql ve sqLite
-            kullanıyorum. Genellikle MERN Stack geliştirme yaptığım için MongoDb
-            Bulut sistemine hakimim.
+            Yakın zamanda Bilgisayar Mühendisi olarak Zonguldak Bülent Ecevit
+            Üniversitesi'nden mezun oldum ve yaklaşık 5 yıldır yazılım alanında
+            deneyim kazanmaktayım. Başlangıçta C ile algoritmik becerilerimi
+            geliştirdim ve ardından C# ile Windows Form uygulamalarına
+            odaklandım. Full Stack geliştirmeye HTML, CSS ve JavaScript ile adım
+            attım. İlk full stack projemi PHP ve JQuery kullanarak başarıyla
+            tamamladım. Son 3 yıldır React ve Express ile çalışarak MERN Stack
+            projelerine imza atıyorum. Şu anda Next ve TypeScript yeteneklerimi
+            geliştirmeye odaklanmaktayım. Ayrıca, Python ile yapay zeka
+            projeleri üzerinde çalıştım ve yazılım becerilerimi her geçen gün
+            artırmak için çaba harcadım. Web geliştirme alanında özellikle ilgi
+            duyduğum için genellikle MongoDB, MySQL, PostgreSQL ve SQLite gibi
+            veritabanlarıyla MERN Stack projeleri geliştirmekteyim. Yeniliklere
+            ve sürekli öğrenmeye açık bir yaklaşım benimsiyorum.
           </p>
         </div>
       </div>
