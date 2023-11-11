@@ -1,8 +1,9 @@
 .page {
   width: 100%;
-  overflow: hidden;
 
-  min-height: calc(100% - 160px);
+
+  max-height: calc(100% - 160px);
+  overflow: auto;
   font-size: large;
   display: flex;
   padding: 5px;
@@ -56,7 +57,7 @@
 .container {
   width: 100%;
   height: auto;
-  overflow: hidden;
+ 
   padding: 10px;
   list-style: none;
   display: grid;

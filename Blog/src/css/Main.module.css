@@ -1,8 +1,8 @@
 main {
   width: 100%;
   min-height: calc(100% - 160px);
-  max-height: calc(100% - 160px);
-
+ 
+  
   align-items: center;
   justify-content: center;
   display: flex;
@@ -29,6 +29,20 @@ main {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+.word{
+ 
+  font-style: italic;
+  line-height: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.darkMain .word{
+  color: #aaa;
+}
+.lightMain .word{
+  color: #444;
 }
 .article img {
   box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
@@ -71,7 +85,7 @@ main {
 .title {
   font-style: italic;
   font-size: 2em;
-  height: 100px;
+
   color: rgb(20, 141, 141);
   font-weight: 700;
 }
@@ -192,9 +206,9 @@ main {
     gap: 0px;
   }
   .info {
-    padding-top: 60px;
+  
     display: flex;
     justify-content: center;
-    align-items: center;
+   
   }
 }

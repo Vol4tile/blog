@@ -1,44 +1,36 @@
 header {
   width: 100%;
   height: 100px;
-  
+
   font-size: 16px;
   display: flex;
   color: black;
   align-items: center;
   justify-content: center;
 }
-.lightHeader{
+.lightHeader {
   background-color: white;
 }
-.darkHeader{
+.darkHeader {
   background-color: black;
 }
-nav {
+header ul {
+  overflow: hidden;
+  z-index: 99;
+  list-style: none;
   display: flex;
   align-items: center;
- font-weight: 700;
- box-shadow: rgb(20, 141, 141) 0px 0px 5px 1px, rgb(20, 141, 141)  0px 0px 1px 0px;
+  font-weight: 600;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 1px,
+    rgb(20, 141, 141) 0px 0px 1px 0px;
   justify-content: center;
   height: 55%;
   border-radius: 30px;
-  padding: 10px;
+  padding: 5px;
   width: auto;
-  gap: 40px;
+  gap: 20px;
 }
-nav a:hover::after {
-  content: "";
-  position: absolute;
-  height: 3px;
 
-  z-index: -1;
-  animation: 0.5s in-out forwards;
-  background: white;
- 
-
-  width: 100%;
-  bottom: 0px;
-}
 @keyframes in-out {
   0% {
     width: 0;
@@ -49,9 +41,9 @@ nav a:hover::after {
   }
 }
 
-nav a,
-nav a:link,
-nav a:visited {
+header ul a,
+header ul a:link,
+header ul a:visited {
   position: relative;
   color: rgb(153, 153, 153);
   text-decoration: none;
@@ -61,68 +53,61 @@ nav a:visited {
   justify-content: center;
   align-items: center;
 }
-nav a:hover {
+header ul a:hover {
   color: rgb(20, 141, 141);
 }
 
 .active {
   color: rgb(20, 141, 141) !important;
 }
-.active::after {
-  content: "";
-  position: absolute;
-  height: 3px;
 
-  z-index: -1;
-
-  background: white; 
-  
-
-  width: 100%;
-  bottom: 0px;
-}
-.hamburger{
+.hamburger {
   display: none;
 }
-.up{
+.up {
   display: none;
- 
+}
+.darkHeader .hamburger svg {
+  color: rgb(153, 153, 153);
+}
+.lightHeader .hamburger svg {
+  color: #444;
+}
+.darkHeader .up svg {
+  fill: rgb(153, 153, 153);
+}
+.lightHeader .up svg {
+  fill: #444;
 }
 @media only screen and (max-width: 1280px) {
-  nav {
+  header ul {
     font-size: 14px;
     gap: 5px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  header{
+  header {
     height: auto;
-  
   }
-  .up{
+  .up {
     padding: 10px;
-  
+
     display: flex;
     align-items: center;
     align-items: center;
-   
-  
   }
- nav{
-  width: 100%;
-  display: none;
-  flex-direction: column;
-  height: auto;
-  box-shadow: none;
- }
- .openNav{
-  display: flex;
- }
- .hamburger{
-  display: block;
- }
-
+  header ul {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    height: auto;
+    box-shadow: none;
+  }
+  .openNav {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
 }
-
-

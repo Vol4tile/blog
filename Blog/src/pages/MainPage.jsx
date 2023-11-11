@@ -127,6 +127,7 @@ const MainPage = () => {
               <div className={MainCSS.title}>{developerText}|</div>
             </div>
           </div>
+          <div className={MainCSS.word}>"Her gün bir öncekine göre daha iyi bir versiyonu olmak için çaba göster. Küçük adımlarla büyük farklar yaratılır."</div>
           <div className={MainCSS.code}>
             <pre className={isDarkMode ? MainCSS.darkPre : MainCSS.lightPre}>
               <code
