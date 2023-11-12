@@ -81,6 +81,16 @@ const Navbar = () => {
           </motion.li>
           <motion.li variants={item}>
             <NavLink
+              to="/Articles"
+              className={({ isActive, isPending }) =>
+                isPending ? NavbarCSS.pending : isActive ? NavbarCSS.active : ""
+              }
+            >
+              Makaleler
+            </NavLink>
+          </motion.li>
+          <motion.li variants={item}>
+            <NavLink
               to="/CV"
               className={({ isActive, isPending }) =>
                 isPending ? NavbarCSS.pending : isActive ? NavbarCSS.active : ""

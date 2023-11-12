@@ -12,9 +12,7 @@ const AboutPage = () => {
   }, []);
   return (
     <motion.div
-      className={`${AboutCSS.container} ${
-        isDarkMode ? AboutCSS.darkContainer : AboutCSS.lightContainer
-      }`}
+      className={`${AboutCSS.container } ${isDarkMode ? AboutCSS.darkContainer : AboutCSS.lightContainer }`}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}

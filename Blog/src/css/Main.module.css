@@ -31,7 +31,7 @@ main {
   gap: 20px;
 }
 .word{
- 
+  padding:0 10px 0 10px;
   font-style: italic;
   line-height: 30px;
   font-size: 14px;

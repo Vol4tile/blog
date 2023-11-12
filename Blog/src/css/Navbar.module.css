@@ -68,7 +68,7 @@ header ul a:hover {
   display: none;
 }
 .darkHeader .hamburger svg {
-  color: rgb(153, 153, 153);
+  color: rgb(253, 253, 253);
 }
 .lightHeader .hamburger svg {
   color: #444;

@@ -6,9 +6,9 @@ import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
 
 import ProjectsPage from "./pages/ProjectsPage";
+import Articles from "./pages/Articles";
 
 const App = () => {
-  
   return (
     <>
       <BrowserRouter>
@@ -17,9 +17,9 @@ const App = () => {
             <Route index={true} element={<MainPage />} />
             <Route path="/CV" element={<CVPage />} />
             <Route path="/Me" element={<AboutPage />} />
-    
+            <Route path="/Articles" element={<Articles />} />
             <Route path="/Projects" element={<ProjectsPage />} />
-          
+
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="*" element={<NotFound />} />
