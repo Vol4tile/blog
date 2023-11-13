@@ -14,31 +14,55 @@ export const allPosts = [
 }
 </pre>`,
   },
+  
   {
     id: 1,
 
     tarih: "30 Mart 2023",
     etiket: "Teknoloji",
     baslik: " Next   ",
-    metin:
-      "Next.js, React tabanlı bir web uygulama geliştirme çerçevesidir. Next.js, React'ın özelliklerini ve avantajlarını genişletir ve React uygulamalarının işlevselliğini ve performansını artırmak için tasarlanmış bir dizi özellik sunar.Next.js, sunucu tarafı renderlama (SSR) sağlar. Bu, sayfaların sunucuda oluşturulduğu ve tarayıcıda sadece statik HTML dosyalarının servis edildiği anlamına gelir. Bu, kullanıcı deneyimini geliştirir ve SEO'yu optimize eder. Ayrıca Next.js, dinamik sayfa yönlendirmesi, otomatik kod bölme, ön yükleme, hata yakalama ve daha birçok özellik sağlar.Next.js, ayrıca statik sitelerin oluşturulmasını da destekler. Bu, verileri kullanarak, sunucuya ihtiyaç duymadan tamamen istemci tarafında çalışan, hızlı ve ölçeklenebilir statik siteler oluşturmanızı sağlar.Next.js, geniş bir topluluk tarafından desteklenir ve React geliştiricileri için popüler bir seçimdir. Next.js aynı zamanda, özelleştirilebilir yapılandırma seçenekleri, hot reloading, API rotaları, CSS modülleri ve çevre değişkenleri gibi özellikleri içerir. Bu özellikler, geliştiricilere uygulamalarını hızlı bir şekilde oluşturma, test etme ve dağıtma olanağı sağlar.Next.js, birçok büyük şirket tarafından kullanılmaktadır ve popüler e-ticaret, blog, web uygulamaları ve daha birçok projede kullanılmaktadır. Özellikle, verimli SEO desteği, hızlı yükleme süreleri ve geliştiricilerin işlerini kolaylaştıran özellikleri nedeniyle, Next.js son yıllarda oldukça popüler hale gelmiştir.Sonuç olarak, Next.js, React geliştiricilerinin performanslı, hızlı ve ölçeklenebilir web uygulamaları ve siteleri oluşturmak için kullandığı bir çerçevedir. Sunucu tarafı renderlama, özelleştirilebilir yapılandırma seçenekleri ve diğer özellikleri ile geliştiricilere güçlü bir araç sunar.",
-  },
-  {
-    id: 2,
+    metin: `<p>useState Hook:</p><p>useState, fonksiyonel bileşenlerde state tanımlamak için kullanılır. State, bir bileşenenin durumu veya verileri depolamasını sağlar ve bu verilerin zaman içinde nasıl değiştiğini izler. useState ile birlikte gelen bir fonksiyonu çağırarak, bir state değişkeni ve bu değişkeni güncellemek için bir fonksiyon elde edersiniz.</p><p>Örnek bir kullanım:</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
-    tarih: "30 Mart 2023",
-    etiket: "Teknoloji",
-    baslik: " Next   ",
-    metin:
-      "Next.js, React tabanlı bir web uygulama geliştirme çerçevesidir. Next.js, React'ın özelliklerini ve avantajlarını genişletir ve React uygulamalarının işlevselliğini ve performansını artırmak için tasarlanmış bir dizi özellik sunar.Next.js, sunucu tarafı renderlama (SSR) sağlar. Bu, sayfaların sunucuda oluşturulduğu ve tarayıcıda sadece statik HTML dosyalarının servis edildiği anlamına gelir. Bu, kullanıcı deneyimini geliştirir ve SEO'yu optimize eder. Ayrıca Next.js, dinamik sayfa yönlendirmesi, otomatik kod bölme, ön yükleme, hata yakalama ve daha birçok özellik sağlar.Next.js, ayrıca statik sitelerin oluşturulmasını da destekler. Bu, verileri kullanarak, sunucuya ihtiyaç duymadan tamamen istemci tarafında çalışan, hızlı ve ölçeklenebilir statik siteler oluşturmanızı sağlar.Next.js, geniş bir topluluk tarafından desteklenir ve React geliştiricileri için popüler bir seçimdir. Next.js aynı zamanda, özelleştirilebilir yapılandırma seçenekleri, hot reloading, API rotaları, CSS modülleri ve çevre değişkenleri gibi özellikleri içerir. Bu özellikler, geliştiricilere uygulamalarını hızlı bir şekilde oluşturma, test etme ve dağıtma olanağı sağlar.Next.js, birçok büyük şirket tarafından kullanılmaktadır ve popüler e-ticaret, blog, web uygulamaları ve daha birçok projede kullanılmaktadır. Özellikle, verimli SEO desteği, hızlı yükleme süreleri ve geliştiricilerin işlerini kolaylaştıran özellikleri nedeniyle, Next.js son yıllarda oldukça popüler hale gelmiştir.Sonuç olarak, Next.js, React geliştiricilerinin performanslı, hızlı ve ölçeklenebilir web uygulamaları ve siteleri oluşturmak için kullandığı bir çerçevedir. Sunucu tarafı renderlama, özelleştirilebilir yapılandırma seçenekleri ve diğer özellikleri ile geliştiricilere güçlü bir araç sunar.",
+     <span class="hljs-keyword">function</span> <span class="hljs-title function_">Counter</span>() {
+     &nbsp;<span class="hljs-keyword">const</span> [count, setCount] = <span class="hljs-title function_">useState</span>(<span class="hljs-number">0</span>);
+     
+     &nbsp;<span class="hljs-keyword">return</span> (
+     &nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+     &nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Count: {count}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+     &nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(count + 1)}&gt;
+     &nbsp;&nbsp;&nbsp;&nbsp;Artır
+     &nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+     &nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+     &nbsp;);
+     }
+     </pre><p><br></p><p>Yukarıdaki örnekte, count adında bir state değişkeni ve bu değişkeni güncellemek için setCount adında bir fonksiyon tanımlanmıştır.</p><p>useEffect Hook:</p><p>useEffect, bileşenin render edilmesinden sonra çalışacak olan bir fonksiyonu tanımlamanızı sağlar. Genellikle, yan etkileri (API çağrıları, abonelikler, vs.) işlemek için kullanılır. Bu, class bileşenlerinde componentDidMount, componentDidUpdate ve componentWillUnmount yaşam döngüsü metodlarını bir araya getirerek bir alternatif sunar.</p><p>Örnek bir kullanım:</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+     
+     <span class="hljs-keyword">function</span> <span class="hljs-title function_">ExampleComponent</span>() {
+     &nbsp;<span class="hljs-keyword">const</span> [data, setData] = <span class="hljs-title function_">useState</span>([]);
+     
+     &nbsp;<span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+     &nbsp;&nbsp;<span class="hljs-comment">// Bu kod, bileşen monte edildiğinde çalışır</span>
+     &nbsp;&nbsp;<span class="hljs-title function_">fetchData</span>();
+     &nbsp;}, []); <span class="hljs-comment">// Boş bağımlılık dizisi, yalnızca bileşen monte edildiğinde çalışmasını sağlar</span>
+     
+     &nbsp;<span class="hljs-keyword">const</span> <span class="hljs-title function_">fetchData</span> = <span class="hljs-keyword">async</span> () =&gt; {
+     &nbsp;&nbsp;<span class="hljs-keyword">try</span> {
+     &nbsp;&nbsp;&nbsp;<span class="hljs-comment">// API çağrısı veya diğer yan etkileri gerçekleştirin</span>
+     &nbsp;&nbsp;&nbsp;<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://example.com/api/data'</span>);
+     &nbsp;&nbsp;&nbsp;<span class="hljs-keyword">const</span> resultData = <span class="hljs-keyword">await</span> result.<span class="hljs-title function_">json</span>();
+     &nbsp;&nbsp;&nbsp;<span class="hljs-title function_">setData</span>(resultData);
+     &nbsp;&nbsp;} <span class="hljs-keyword">catch</span> (error) {
+     &nbsp;&nbsp;&nbsp;<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'Veri getirme hatası:'</span>, error);
+     &nbsp;&nbsp;}
+     &nbsp;};
+     
+     &nbsp;<span class="hljs-keyword">return</span> (
+     &nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+     &nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Veri: {JSON.stringify(data)}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+     &nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+     &nbsp;);
+     }
+     </pre><p>Yukarıdaki örnekte, useEffect kullanarak bileşen monte edildiğinde fetchData fonksiyonunu çağırıyoruz.</p><p>Bu iki hook'u kullanarak, fonksiyonel bileşenlerde state yönetimini ve yaşam döngüsü olaylarına müdahale etmeyi kolaylaştırabilirsiniz.</p><p><br></p>`,
   },
-  {
-    id: 3,
-
-    tarih: "30 Mart 2023",
-    etiket: "Teknoloji",
-    baslik: " Next   ",
-    metin:
-      "Next.js, React tabanlı bir web uygulama geliştirme çerçevesidir. Next.js, React'ın özelliklerini ve avantajlarını genişletir ve React uygulamalarının işlevselliğini ve performansını artırmak için tasarlanmış bir dizi özellik sunar.Next.js, sunucu tarafı renderlama (SSR) sağlar. Bu, sayfaların sunucuda oluşturulduğu ve tarayıcıda sadece statik HTML dosyalarının servis edildiği anlamına gelir. Bu, kullanıcı deneyimini geliştirir ve SEO'yu optimize eder. Ayrıca Next.js, dinamik sayfa yönlendirmesi, otomatik kod bölme, ön yükleme, hata yakalama ve daha birçok özellik sağlar.Next.js, ayrıca statik sitelerin oluşturulmasını da destekler. Bu, verileri kullanarak, sunucuya ihtiyaç duymadan tamamen istemci tarafında çalışan, hızlı ve ölçeklenebilir statik siteler oluşturmanızı sağlar.Next.js, geniş bir topluluk tarafından desteklenir ve React geliştiricileri için popüler bir seçimdir. Next.js aynı zamanda, özelleştirilebilir yapılandırma seçenekleri, hot reloading, API rotaları, CSS modülleri ve çevre değişkenleri gibi özellikleri içerir. Bu özellikler, geliştiricilere uygulamalarını hızlı bir şekilde oluşturma, test etme ve dağıtma olanağı sağlar.Next.js, birçok büyük şirket tarafından kullanılmaktadır ve popüler e-ticaret, blog, web uygulamaları ve daha birçok projede kullanılmaktadır. Özellikle, verimli SEO desteği, hızlı yükleme süreleri ve geliştiricilerin işlerini kolaylaştıran özellikleri nedeniyle, Next.js son yıllarda oldukça popüler hale gelmiştir.Sonuç olarak, Next.js, React geliştiricilerinin performanslı, hızlı ve ölçeklenebilir web uygulamaları ve siteleri oluşturmak için kullandığı bir çerçevedir. Sunucu tarafı renderlama, özelleştirilebilir yapılandırma seçenekleri ve diğer özellikleri ile geliştiricilere güçlü bir araç sunar.",
-  },
+  
 ];

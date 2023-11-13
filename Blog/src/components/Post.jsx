@@ -4,11 +4,34 @@ import PostCSS from "../css/Post.module.css";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser"
 import hljs from "highlight.js";
-import "../../node_modules/highlight.js/styles/github-dark.css";
+
+import { useTheme } from "../context/ThemeContext";
 const Post = ({ post }) => {
+  const { isDarkMode, toggleTheme } = useTheme();
   useEffect(() => {
-    hljs.highlightAll();
-  }, []);
+    const loadStyles = () => {
+      // Tema değişikliğine göre stil dosyalarını yükleyin
+      const styleLink = document.getElementById("highlight-styles");
+
+      if (styleLink) {
+        styleLink.href = isDarkMode
+          ? "../../node_modules/highlight.js/styles/github-dark.css"
+          : "../../node_modules/highlight.js/styles/github.css";
+      } else {
+        const newStyleLink = document.createElement("link");
+        newStyleLink.rel = "stylesheet";
+        newStyleLink.type = "text/css";
+        newStyleLink.id = "highlight-styles";
+        newStyleLink.href = isDarkMode
+          ? "../../node_modules/highlight.js/styles/github-dark.css"
+          : "../../node_modules/highlight.js/styles/github.css";
+        document.head.appendChild(newStyleLink);
+      }
+    };
+
+    loadStyles();
+  }, [isDarkMode]);
+ 
   return (
     <>
       <motion.article

@@ -4,7 +4,7 @@ import MainPage from "./pages/MainPage";
 import CVPage from "./pages/CVPage";
 import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
-
+import SelectedPostPage from "./pages/SelectedPostPage"
 import ProjectsPage from "./pages/ProjectsPage";
 import Articles from "./pages/Articles";
 
@@ -19,7 +19,7 @@ const App = () => {
             <Route path="/Me" element={<AboutPage />} />
             <Route path="/Articles" element={<Articles />} />
             <Route path="/Projects" element={<ProjectsPage />} />
-
+            <Route path="/article/:id" element={<SelectedPostPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="*" element={<NotFound />} />

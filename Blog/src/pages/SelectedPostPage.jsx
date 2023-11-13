@@ -1,13 +1,39 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import MainCSS from "../css/Main.module.css";
 import SelectedPostPageCSS from "../css/SelectedPostPage.module.css";
 import { allPosts } from "../assets/posts";
+import parse from "html-react-parser";
+import { useTheme } from "../context/ThemeContext";
+import { useEffect } from "react";
 const SelectedPostPage = () => {
-  const { postId } = useParams();
-  const post = allPosts.find((item) => item.id === parseInt(postId));
+  const { isDarkMode, toggleTheme } = useTheme();
+  const { id } = useParams();
+  const post = allPosts.find((item) => item.id === parseInt(id));
+ 
+  useEffect(() => {
+    const loadStyles = () => {
+      // Tema değişikliğine göre stil dosyalarını yükleyin
+      const styleLink = document.getElementById("highlight-styles");
 
+      if (styleLink) {
+        styleLink.href = isDarkMode
+          ? "../../node_modules/highlight.js/styles/github-dark.css"
+          : "../../node_modules/highlight.js/styles/github.css";
+      } else {
+        const newStyleLink = document.createElement("link");
+        newStyleLink.rel = "stylesheet";
+        newStyleLink.type = "text/css";
+        newStyleLink.id = "highlight-styles";
+        newStyleLink.href = isDarkMode
+          ? "../../node_modules/highlight.js/styles/github-dark.css"
+          : "../../node_modules/highlight.js/styles/github.css";
+        document.head.appendChild(newStyleLink);
+      }
+    };
+
+    loadStyles();
+  }, [isDarkMode]);
   if (!post) {
     return (
       <div
@@ -25,39 +51,18 @@ const SelectedPostPage = () => {
   }
   return (
     <motion.article
-      className={SelectedPostPageCSS.article}
+      className={`${isDarkMode ?  SelectedPostPageCSS.dark: SelectedPostPageCSS.light} ${SelectedPostPageCSS.article} `}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
     >
       <div className={SelectedPostPageCSS.container}>
-        <div className={SelectedPostPageCSS.postImage}>
-          <img src={`/${post.paylasimResmi}`} alt="React logosu" />
-        </div>
-        <div className={SelectedPostPageCSS.date}>
-          <div>{post.tarih}</div>
-          <div className={SelectedPostPageCSS.tag}>{post.etiket}</div>
-        </div>
         <h1>{post.baslik}</h1>
-        <p>{post.metin}</p>
-        <div className={SelectedPostPageCSS.bottomContent}>
-          <div className={SelectedPostPageCSS.writer}>
-            <div className={SelectedPostPageCSS.writerImage}>
-              <img src={`/${post.paylasanResmi}`} alt={post.paylasanAdi} />
-            </div>
-            <div className={SelectedPostPageCSS.writerInfo}>
-              <div>{post.paylasanAdi}</div>
-              <div>{post.paylasanUnvan}</div>
-            </div>
-          </div>
-          <div
-            style={{
-              opacity: "0.8",
-              display: "flex",
-              alignItems: "center",
-            }}
-          ></div>
+        <div className={SelectedPostPageCSS.date}>
+          <div className={SelectedPostPageCSS.tag}>{post.etiket}</div>
+          <div>{post.tarih}</div>
         </div>
+        <p>{parse(post.metin)}</p>
       </div>
     </motion.article>
   );
