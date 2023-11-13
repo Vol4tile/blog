@@ -8,29 +8,26 @@ import hljs from "highlight.js";
 import { useTheme } from "../context/ThemeContext";
 const Post = ({ post }) => {
   const { isDarkMode, toggleTheme } = useTheme();
-  useEffect(() => {
-    const loadStyles = () => {
-      // Tema değişikliğine göre stil dosyalarını yükleyin
-      const styleLink = document.getElementById("highlight-styles");
-
-      if (styleLink) {
-        styleLink.href = isDarkMode
-          ? "../../node_modules/highlight.js/styles/github-dark.css"
-          : "../../node_modules/highlight.js/styles/github.css";
-      } else {
-        const newStyleLink = document.createElement("link");
-        newStyleLink.rel = "stylesheet";
-        newStyleLink.type = "text/css";
-        newStyleLink.id = "highlight-styles";
-        newStyleLink.href = isDarkMode
-          ? "../../node_modules/highlight.js/styles/github-dark.css"
-          : "../../node_modules/highlight.js/styles/github.css";
-        document.head.appendChild(newStyleLink);
-      }
-    };
-
-    loadStyles();
-  }, [isDarkMode]);
+  const loadStyles = () => {
+    // Tema değişikliğine göre stil dosyalarını yükleyin
+    const styleLink = document.getElementById("highlight-styles");
+  
+    const stylePath = isDarkMode ? "/github-dark.min.css" : "/github.min.css";
+  
+    if (styleLink) {
+      styleLink.href = stylePath;
+    } else {
+      const newStyleLink = document.createElement("link");
+      newStyleLink.rel = "stylesheet";
+      newStyleLink.type = "text/css";
+      newStyleLink.id = "highlight-styles";
+      newStyleLink.href = stylePath;
+      document.head.appendChild(newStyleLink);
+    }
+  };
+  useEffect(()=>{
+    loadStyles()
+  },[isDarkMode])
  
   return (
     <>
