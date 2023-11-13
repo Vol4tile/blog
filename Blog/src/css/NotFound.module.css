@@ -3,9 +3,17 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    color: white;
+
     height: calc(100% - 160px);
 }
 .container a,.container a:visited,.container a:hover{
     color: rgb(20, 141, 141);
+}
+.dark{
+    color: white;
+    background-color: black;
+}
+.light{
+    color: black;
+    background-color: white;
 }

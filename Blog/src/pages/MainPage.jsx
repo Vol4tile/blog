@@ -8,8 +8,7 @@ import { useRef } from "react";
 import hljs from "highlight.js";
 import { CiMail } from "react-icons/ci";
 import { useTheme } from "../context/ThemeContext";
-import "../../node_modules/highlight.js/styles/lightfair.css";
-import "../../node_modules/highlight.js/styles/dark.css";
+
 const MainPage = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   const [developerText, setDeveloperText] = useState("");

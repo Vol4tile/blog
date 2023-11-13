@@ -1,15 +1,13 @@
 .article {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 4px;
-  height: 800px;
-  border-radius: 6px;
+
+  height: auto;
+
   width: 512px;
   max-width: calc(33% - 60px);
-  gap: 20px;
+
   font-size: 16px;
-  height: auto;
 }
 h1 {
   padding: 5px;
@@ -23,101 +21,44 @@ h1 {
   padding: 5px;
 }
 .tag {
-  background-color: #edf6fa;
   padding: 8px 20px 8px 20px;
   color: rgb(20, 141, 141);
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
+    rgb(20, 141, 141) 0px 0px 1px 0px;
   border-radius: 10px;
 }
-.postImage {
-  width: 512px;
-  max-width: 100%;
-  height: 288px;
-}
-.postImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-.bottomContent {
-  display: flex;
+
+.article p {
   padding: 5px;
-  height: 36px;
-  justify-content: space-between;
-}
-.writer {
-  display: flex;
-  height: 36px;
-  gap: 10px;
-}
-
-.writerImage {
-  width: 36px;
-
-  height: 36px;
-}
-.writerInfo {
-  height: 36px;
-  font-style: italic;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.writerInfo div {
-  height: 18px;
-}
-.writerImage img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
- .article p {
-  padding: 5px;
+  overflow: hidden;
 
-  width: 100%;
-  height: 220px;
-  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 10; /* Kaç satır sonra üç nokta ekleneceği */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis; /* Metni üç nokta (...) ile kırp */
   font-weight: 370;
 }
-.bottomContent a,
-.bottomContent a:link,
-.bottomContent a:visited {
-  opacity: 0.8;
-  color: black;
-  text-decoration: none;
-}
-.bottomContent a:hover {
-  opacity: 1;
-}
-@media only screen and (max-width: 1600px) {
-  .article{
-    height: 790px;
-  }
-  .article p{
-    margin-bottom: 70px;
-  }
-}
 
+.article a, .article a:visited, .article a:hover{
+  margin-left: 5px;
+  text-decoration: none;
+  color:rgb(20, 141, 141) ;
+  width: fit-content;
+}
 
 @media only screen and (max-width: 1280px) {
-  .article p {
-  
-    margin-bottom: 20px;
-  }
   main {
     flex-direction: column;
     height: auto;
     width: 100%;
-  
 
     align-items: center;
   }
   .article {
     width: 512px;
-    height: 750px;
+    height: auto;
     max-width: calc(100% - 30px);
   }
   nav {
@@ -130,5 +71,4 @@ h1 {
     font-size: 14px;
     gap: 5px;
   }
- 
 }

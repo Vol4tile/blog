@@ -2,7 +2,7 @@
   width: 100%;
 
 
-  max-height: calc(100% - 160px);
+  height: calc(100% - 160px);
   overflow: auto;
   font-size: large;
   display: flex;

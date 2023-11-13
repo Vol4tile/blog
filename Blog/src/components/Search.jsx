@@ -16,12 +16,7 @@ const Search = ({ posts, filteredPosts, setFilteredPosts }) => {
               post.etiket
                 .toLowerCase()
                 .includes(e.target.value.toLowerCase()) ||
-              post.baslik
-                .toLowerCase()
-                .includes(e.target.value.toLowerCase()) ||
-              post.paylasanAdi
-                .toLowerCase()
-                .includes(e.target.value.toLowerCase())
+              post.baslik.toLowerCase().includes(e.target.value.toLowerCase())
             );
           });
           const isEqual =
