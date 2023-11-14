@@ -1,6 +1,6 @@
 import React from "react";
 import AboutCSS from "../css/About.module.css";
-import IlkanLogo from "../assets/ilkanErdogan.png";
+import IlkanLogo from "../assets/ilkannobackg.png";
 import { motion } from "framer-motion";
 import changeMetaTags from "../utils/changeMetaTags";
 import { useEffect } from "react";
@@ -29,9 +29,9 @@ const AboutPage = () => {
             <ul>
               <li>Node.js</li>
               <li>React.js</li>
-              <li>Javascript</li>
+              <li>JavaScript</li>
               <li>TypeScript</li>
-              <li>Php</li>
+              <li>PHP</li>
               <li>Next.js</li>
               <li>HTML</li>
               <li>CSS</li>
@@ -40,20 +40,16 @@ const AboutPage = () => {
         </div>
         <div className={AboutCSS.aboutContainer}>
           <p>
-            Yakın zamanda Bilgisayar Mühendisi olarak Zonguldak Bülent Ecevit
-            Üniversitesi'nden mezun oldum ve yaklaşık 5 yıldır yazılım alanında
-            deneyim kazanmaktayım. Başlangıçta C ile algoritmik becerilerimi
-            geliştirdim ve ardından C# ile Windows Form uygulamalarına
-            odaklandım. Full Stack geliştirmeye HTML, CSS ve JavaScript ile adım
+             Yaklaşık 5 yıldır yazılım alanında
+            deneyim kazanmaktayım. Temmuz ayında Bilgisayar Mühendisi ünvanımı aldım. Başlangıçta C ile algoritmik becerilerimi
+            geliştirdim ve ardından C# ile Windows Form uygulamalarıyla çalıştım.
+            Full Stack geliştirmeye HTML, CSS ve JavaScript ile adım
             attım. İlk full stack projemi PHP ve JQuery kullanarak başarıyla
             tamamladım. Son 3 yıldır React ve Express ile çalışarak MERN Stack
-            projelerine imza atıyorum. Şu anda Next ve TypeScript yeteneklerimi
-            geliştirmeye odaklanmaktayım. Ayrıca, Python ile yapay zeka
-            projeleri üzerinde çalıştım ve yazılım becerilerimi her geçen gün
-            artırmak için çaba harcadım. Web geliştirme alanında özellikle ilgi
-            duyduğum için genellikle MongoDB, MySQL, PostgreSQL ve SQLite gibi
-            veritabanlarıyla MERN Stack projeleri geliştirmekteyim. Yeniliklere
-            ve sürekli öğrenmeye açık bir yaklaşım benimsiyorum.
+            projelerine imza atıyorum. Günümüzde popülatitesini arttırmasıyla birlikte Next.js ve TailwindCSS i bilgilerime ekledim.
+            Kendimi geliştirdiğim ana yazılım dili Javascript fakat farklı programlama yöntemlerine ve
+            teknolojilerine göz atabilmek için Asp.Net Core ile backend geliştirmekteyim.
+            İyi seviyede MySql,PostgreSql ve MongoDb bilmekteyim.
           </p>
         </div>
       </div>

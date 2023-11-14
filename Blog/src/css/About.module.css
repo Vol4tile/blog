@@ -1,21 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
 .container {
   width: 100%;
   height: calc(100% - 160px);
   display: flex;
   justify-content: center;
+  font-family: "Inter", sans-serif;
   align-items: center;
-
 }
-.darkContainer{
+.darkContainer {
   background-color: black;
   color: #686d83;
 }
-.lightContainer{
+.lightContainer {
   background-color: white;
   color: #686d83;
 }
 .innerContainer {
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 2px, rgb(20, 141, 141)  0px 0px 1px 2px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 2px,
+    rgb(20, 141, 141) 0px 0px 1px 2px;
   display: flex;
   border-radius: 15px;
   overflow: hidden;
@@ -42,7 +44,14 @@
   font-size: 14px;
   line-height: 21px;
 }
-
+.lightContainer .cardContainer {
+  background-color: rgb(20, 141, 141);
+  color: white;
+}
+.lightContainer .skills {
+  background-color: rgb(20, 141, 141);
+  color: white;
+}
 .cardContainer {
   background-color: black;
   color: rgb(175, 175, 175);
@@ -56,7 +65,8 @@
 }
 
 .cardContainer .round {
-  border: 2px solid rgb(20, 141, 141);
+  background-color: white;
+
   border-radius: 50%;
   padding: 7px;
   height: 128px;
@@ -75,23 +85,24 @@
 .skills ul {
   list-style-type: none;
   margin: 0;
+
   padding: 0;
 }
-
+.lightContainer .skills ul li {
+  box-shadow: white 0px 0px 5px 0px, white 0px 0px 1px 0px;
+}
 .skills ul li {
-
   border-radius: 6px;
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px, rgb(20, 141, 141)  0px 0px 1px 0px;
+  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
+    rgb(20, 141, 141) 0px 0px 1px 0px;
 
-
- 
   display: inline-block;
   line-height: 25px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 0.3px;
   margin: 0 7px 7px 0;
-  padding: 7px;
+  padding: 3px 7px 3px 7px;
 }
 .aboutContainer {
   background-color: #f7f7f7;
@@ -104,29 +115,25 @@
 .aboutContainer p {
   width: 80%;
 
-  line-height: 25px;
-  letter-spacing: 0.6px;
- 
+  line-height: 24px;
+  letter-spacing: 0.5px;
 }
 
-
 @media only screen and (max-width: 1000px) {
-  .container{
+  .container {
     height: auto;
     border-radius: 0px;
   }
   .innerContainer {
     box-shadow: none;
-  flex-direction: column;
-  border-radius: 0px;
-   font-size: small;
+    flex-direction: column;
+    border-radius: 0px;
+    font-size: small;
   }
-  .aboutContainer{
+  .aboutContainer {
     border-radius: 0px;
   }
-  .cardContainer{
+  .cardContainer {
     width: 100%;
   }
 }
-
-

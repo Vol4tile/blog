@@ -45,7 +45,7 @@ const Post = ({ post }) => {
           <div>{post.tarih}</div>
         </div>
      
-        <p>{parse(post.metin)}</p>
+        <p className={PostCSS.parag}>{parse(post.metin)}</p>
         <Link to={`/article/${post.id}`}>Devamını gör</Link>
       </motion.article>
     </>
