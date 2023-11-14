@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 .article {
   display: flex;
   flex-direction: column;
 
   height: auto;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 
+  font-size: 17px;
   width: 512px;
   max-width: calc(33% - 60px);
+  height: 500px;
 
-  font-size: 16px;
+
 }
-h1 {
+.article p {
+  line-height: 35px;
+  letter-spacing: 0.5px;
+}
+.article h1 {
   padding: 5px;
   margin: 0;
+  font-weight: 900;
+}
+.article h2{
+  font-weight: 700;
 }
 .date {
   display: flex;
@@ -19,6 +32,8 @@ h1 {
   justify-content: space-between;
   opacity: 0.7;
   padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .dark .tag {
@@ -45,14 +60,14 @@ h1 {
   -webkit-line-clamp: 10; /* Kaç satır sonra üç nokta ekleneceği */
   -webkit-box-orient: vertical;
   text-overflow: ellipsis; /* Metni üç nokta (...) ile kırp */
-  font-weight: 370;
+
 }
 .dark pre {
-  background-color: #111;
+  background-color: #151515;
 }
 
 .light pre {
-  background-color: #ddd;
+  background-color: #f7f7f7;
 }
 .article a,
 .article a:visited,
