@@ -5,13 +5,33 @@
   overflow: auto;
   justify-content: center;
 }
-.dark{
+.dark {
   color: white;
   background-color: black;
 }
-.light{
+.light {
   color: black;
   background-color: white;
+}
+.dark pre {
+  background-color: #111;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: auto;
+}
+.dark pre::-webkit-scrollbar {
+  height: 10px;
+}
+.light pre::-webkit-scrollbar {
+  height: 10px;
+}
+
+.light pre {
+  background-color: #ddd;
+  overflow: auto;
+
+  padding: 5px;
+  border-radius: 5px;
 }
 .container {
   width: 600px;
@@ -27,17 +47,22 @@
   justify-content: space-between;
   opacity: 0.7;
 }
-.tag {
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
-    rgb(20, 141, 141) 0px 0px 1px 0px;
+.dark .tag {
+  box-shadow: white 0px 0px 5px 0px,
+  white 0px 0px 1px 0px;
 
-  padding: 8px 20px 8px 20px;
-  color: rgb(20, 141, 141);
+  padding: 6px 15px 6px 15px;
+  color: white;
   border-radius: 10px;
 }
+.light .tag{
+  box-shadow: black 0px 0px 5px 0px,
+  black 0px 0px 1px 0px;
 
-
-
+  padding: 6px 15px 6px 15px;
+  color: black;
+  border-radius: 10px;
+}
 @media only screen and (max-width: 1280px) {
   .container {
     width: 700px;

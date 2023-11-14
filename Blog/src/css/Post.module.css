@@ -20,11 +20,19 @@ h1 {
   opacity: 0.7;
   padding: 5px;
 }
-.tag {
-  padding: 8px 20px 8px 20px;
-  color: rgb(20, 141, 141);
-  box-shadow: rgb(20, 141, 141) 0px 0px 5px 0px,
-    rgb(20, 141, 141) 0px 0px 1px 0px;
+
+.dark .tag {
+  box-shadow: white 0px 0px 5px 0px, white 0px 0px 1px 0px;
+
+  padding: 6px 15px 6px 15px;
+  color: white;
+  border-radius: 10px;
+}
+.light .tag {
+  box-shadow: black 0px 0px 5px 0px, black 0px 0px 1px 0px;
+
+  padding: 6px 15px 6px 15px;
+  color: black;
   border-radius: 10px;
 }
 
@@ -40,11 +48,19 @@ h1 {
   text-overflow: ellipsis; /* Metni üç nokta (...) ile kırp */
   font-weight: 370;
 }
+.dark pre {
+  background-color: #111;
+}
 
-.article a, .article a:visited, .article a:hover{
+.light pre {
+  background-color: #ddd;
+}
+.article a,
+.article a:visited,
+.article a:hover {
   margin-left: 5px;
   text-decoration: none;
-  color:rgb(20, 141, 141) ;
+  color: rgb(20, 141, 141);
   width: fit-content;
 }
 

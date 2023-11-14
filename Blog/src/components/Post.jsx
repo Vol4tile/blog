@@ -32,7 +32,7 @@ const Post = ({ post }) => {
   return (
     <>
       <motion.article
-        className={PostCSS.article}
+         className={`${isDarkMode ?  PostCSS.dark: PostCSS.light} ${PostCSS.article} `}
         layout
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}

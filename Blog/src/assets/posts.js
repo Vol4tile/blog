@@ -4,7 +4,7 @@ export const allPosts = [
 
     tarih: "30 Mart 2023",
     etiket: "Yazılım",
-    baslik: " React  ",
+    baslik: " Hello World with C  ",
     metin: `<pre class="ql-syntax" spellcheck="false">
 <span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
 <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
@@ -20,7 +20,7 @@ export const allPosts = [
 
     tarih: "30 Mart 2023",
     etiket: "Teknoloji",
-    baslik: " Next   ",
+    baslik: " React useState and useEffect Hooks   ",
     metin: `<p>useState Hook:</p><p>useState, fonksiyonel bileşenlerde state tanımlamak için kullanılır. State, bir bileşenenin durumu veya verileri depolamasını sağlar ve bu verilerin zaman içinde nasıl değiştiğini izler. useState ile birlikte gelen bir fonksiyonu çağırarak, bir state değişkeni ve bu değişkeni güncellemek için bir fonksiyon elde edersiniz.</p><p>Örnek bir kullanım:</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
      <span class="hljs-keyword">function</span> <span class="hljs-title function_">Counter</span>() {
