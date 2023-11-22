@@ -6,9 +6,10 @@ import { motion } from "framer-motion";
 import PDFImage from "../assets/pdfimage.png"
 import changeMetaTags from "../utils/changeMetaTags";
 import {SlCloudDownload} from "react-icons/sl"
-
+import { useTheme } from "../context/ThemeContext";
 
 const CVPage = () => {
+  const { isDarkMode, toggleTheme } = useTheme();
   const downloadPDF = () => {
     const link = document.createElement("a");
     link.href = PDFFile;
@@ -21,7 +22,7 @@ const CVPage = () => {
   return (
     <>
       <motion.div
-       className={CVCSS.container}
+       className={`${CVCSS.container} ${isDarkMode ? CVCSS.dark : ''}`}
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}

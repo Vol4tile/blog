@@ -70,7 +70,7 @@ export const allPosts = [
 
     tarih: "30 Mart 2023",
     etiket: "Teknoloji",
-    baslik: " React derinlemesi useState  ",
+    baslik: " React derinlemesi useEffect  ",
     metin: `
     <h2>useEffect</h2><p> React'ta yan etkileri (side effects) yönetmek için kullanılan bir Hook'tur. Yan etkiler, örneğin ağ istekleri yapma, veritabanı sorgularını işleme, abonelikleri yönetme gibi işlemleri ifade eder. Bu tür işlemler
     genellikle bir bileşenin yaşam döngüsü içinde gerçekleşir.</p><p>useEffect, bir işlev ve bağımlılıklar (dependencies) listesi alır. Bu işlev, bileşen her render edildiğinde çalışır. Ancak, bağımlılıklar listesi verildiğinde, sadece bu bağımlılıkların değerleri değiştiğinde veya bileşen ilk kez render edildiğinde çalışır.</p><p>İşte basit bir örnek:</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
