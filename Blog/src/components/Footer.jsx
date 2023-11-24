@@ -2,7 +2,8 @@ import React from "react";
 import FooterCSS from "../css/Footer.module.css";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { useTheme } from "../context/ThemeContext";
-import { FiSun, FiMoon } from "react-icons/fi";
+
+import ModeSwitch from "./ModeSwitch";
 const Footer = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   return (
@@ -23,13 +24,7 @@ const Footer = () => {
           {new Date().getFullYear()} İlkan ERDOĞAN{" "}
         </div>
 
-        <span className={FooterCSS.toggle}>
-          {isDarkMode ? (
-            <FiMoon size={20} onClick={toggleTheme} />
-          ) : (
-            <FiSun size={20} onClick={toggleTheme} />
-          )}
-        </span>
+        <ModeSwitch />
       </footer>
     </>
   );

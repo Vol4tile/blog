@@ -31,7 +31,7 @@ const CVPage = () => {
       
 
         
-        <object data={PDFFile} type="application/pdf" >
+        <object data={PDFFile} type="application/pdf"  >
         <div   className={CVCSS.innerContainer}><img src={PDFImage}  ></img> <SlCloudDownload className={CVCSS.downBtn} size={20} fill="gray"   onClick={downloadPDF}/></div>
 </object>
       

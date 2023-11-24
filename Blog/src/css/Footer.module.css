@@ -55,13 +55,6 @@ color: white;
   align-items: center;
 }
 
-.toggle{
-  user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
 
 
 
