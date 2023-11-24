@@ -48,6 +48,7 @@ const SelectedPostPage = () => {
     );
   }
   return (
+    <div className={`${SelectedPostPageCSS.fullContainer} ${isDarkMode ? SelectedPostPageCSS.dark : SelectedPostPageCSS.light }`}>
     <motion.article
       className={`${isDarkMode ?  SelectedPostPageCSS.dark: SelectedPostPageCSS.light} ${SelectedPostPageCSS.article} `}
       animate={{ opacity: 1 }}
@@ -62,7 +63,7 @@ const SelectedPostPage = () => {
         </div>
         <p>{parse(post.metin)}</p>
       </div>
-    </motion.article>
+    </motion.article></div>
   );
 };
 

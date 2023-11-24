@@ -15,12 +15,14 @@ const Articles = () => {
     changeMetaTags({ title: "Paylaşımlar" });
   }, []);
   return (
-    <>
+    <div
+      className={`${styles.fullContainer} ${
+        isDarkMode ? styles.dark : styles.light
+      }`}
+    >
       <motion.div
         layout
-        className={`${styles.section} ${
-          isDarkMode ? styles.dark : styles.light
-        }`}
+        className={`${styles.section} `}
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
@@ -36,7 +38,7 @@ const Articles = () => {
           })}
         </div>
       </motion.div>
-    </>
+    </div>
   );
 };
 

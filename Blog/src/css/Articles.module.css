@@ -1,7 +1,15 @@
+.fullContainer {
+  width: 100%;
+  min-height: calc(100% - 160px);
+  display: flex;
+ 
+  justify-content: center;
+}
+
 .section {
   width: 100%;
   
-  height: calc(100% - 160px);
+  height: 100%;
   overflow: auto;
  
 }

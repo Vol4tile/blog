@@ -11,8 +11,9 @@ const AboutPage = () => {
     changeMetaTags({ title: "Hakkımda" });
   }, []);
   return (
+    <div className={`${AboutCSS.fullContainer} ${isDarkMode ? AboutCSS.darkContainer : AboutCSS.lightContainer }`}>
     <motion.div
-      className={`${AboutCSS.container } ${isDarkMode ? AboutCSS.darkContainer : AboutCSS.lightContainer }`}
+      className={`${AboutCSS.container } `}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
@@ -53,7 +54,7 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </motion.div></div>
   );
 };
 

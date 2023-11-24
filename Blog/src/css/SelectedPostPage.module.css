@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+.fullContainer {
+  width: 100%;
+  min-height: calc(100% - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .article {
   width: 100%;
-  height: calc(100% - 160px);
+  height: 100%;
   display: flex;
   overflow: auto;
   justify-content: center;

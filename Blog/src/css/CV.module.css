@@ -1,16 +1,25 @@
-.container {
+.fullContainer {
+  width: 100%;
   height: calc(100% - 160px);
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+}
+.container {
+  height: 100%;
+
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+
   position: relative;
 }
 .dark {
   background-color: black;
 }
-.dark object{
+.dark object {
   background-color: black;
 }
 .innerContainer {
@@ -26,7 +35,7 @@ object {
 }
 object img {
   border-radius: 20px;
- 
+
   max-width: 100%;
 }
 .downBtn {

@@ -20,9 +20,13 @@ const CVPage = () => {
     changeMetaTags({ title: "CV" });
   }, []);
   return (
-    <>
+    <div
+    className={`${CVCSS.fullContainer} ${
+      isDarkMode ? CVCSS.dark : ''
+    }`}
+  >
       <motion.div
-       className={`${CVCSS.container} ${isDarkMode ? CVCSS.dark : ''}`}
+       className={`${CVCSS.container} `}
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
@@ -37,7 +41,7 @@ const CVPage = () => {
       
      
        </motion.div>
-    </>
+    </div>
   );
 };
 
