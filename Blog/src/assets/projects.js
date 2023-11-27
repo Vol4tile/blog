@@ -69,9 +69,7 @@ export const projects = [
       "FullStackBlog/3.png",
       "FullStackBlog/4.png",
       "FullStackBlog/5.png",
-      "FullStackBlog/6.png",
-      "FullStackBlog/7.png",
-      "FullStackBlog/8.png",
+ 
     ],
     name: "Full Stack Blog",
     languages: ["React", "Express", "Node"],
