@@ -98,8 +98,7 @@ export const allPosts = [
     tarih: "30 Kasım 2023",
     etiket: "Yazılım",
     baslik: "Beyefendi ile  Kelime Tespiti ve Sansürleme ",
-    metin: `<p>Öncelikle kütüphaneyi yüklememiz gerekiyor.</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-built_in">npm</span> i beyefendi
-    </pre><p>Komutuyla npmi yükledikten sonra import etmeliyiz.</p><pre class="ql-syntax" spellcheck="false">import {checkFill} <span class="hljs-keyword">from</span> <span class="hljs-string">"beyefendi"</span>
+    metin: `<p>Öncelikle kütüphaneyi yüklememiz gerekiyor.</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-built_in">npm</span> i beyefendi</pre><p>Komutuyla npmi yükledikten sonra import etmeliyiz.</p><pre class="ql-syntax" spellcheck="false">import {checkFill} <span class="hljs-keyword">from</span> <span class="hljs-string">"beyefendi"</span>
     
     <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">isHaveBad</span> = <span class="hljs-title function_ invoke__">checkFill</span>({<span class="hljs-attr">text</span>:<span class="hljs-string">"word1"</span>}) <span class="hljs-comment">// return true</span>
     <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">filteredText</span> = <span class="hljs-title function_ invoke__">checkFill</span>({<span class="hljs-attr">text</span>:<span class="hljs-string">"word1"</span>,<span class="hljs-attr">returnType</span>:<span class="hljs-number">1</span>})  <span class="hljs-comment">// return '*****'</span>
