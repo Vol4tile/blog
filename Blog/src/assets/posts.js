@@ -2,24 +2,8 @@ export const allPosts = [
   {
     id: 0,
 
-    tarih: "30 Mart 2023",
+    tarih: "30 Ekim 2023",
     etiket: "Yazılım",
-    baslik: " Hello World with C  ",
-    metin: `<pre class="ql-syntax" spellcheck="false">
-<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
-</span>{
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-built_in">printf</span>(<span class="hljs-string">"Hello World"</span>);
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}
-</pre>`,
-  },
-
-  {
-    id: 1,
-
-    tarih: "30 Mart 2023",
-    etiket: "Teknoloji",
     baslik: " React useState and useEffect Hooks   ",
     metin: `<p>useState Hook:</p><p>useState, fonksiyonel bileşenlerde state tanımlamak için kullanılır. State, bir bileşenenin durumu veya verileri depolamasını sağlar ve bu verilerin zaman içinde nasıl değiştiğini izler. useState ile birlikte gelen bir fonksiyonu çağırarak, bir state değişkeni ve bu değişkeni güncellemek için bir fonksiyon elde edersiniz.</p><p>Örnek bir kullanım:</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 
@@ -66,10 +50,10 @@ export const allPosts = [
   },
 
   {
-    id: 2,
+    id: 1,
 
-    tarih: "30 Mart 2023",
-    etiket: "Teknoloji",
+    tarih: "30 Ekim 2023",
+    etiket: "Yazılım",
     baslik: " React derinlemesi useEffect  ",
     metin: `
     <h2>useEffect</h2><p> React'ta yan etkileri (side effects) yönetmek için kullanılan bir Hook'tur. Yan etkiler, örneğin ağ istekleri yapma, veritabanı sorgularını işleme, abonelikleri yönetme gibi işlemleri ifade eder. Bu tür işlemler
@@ -106,5 +90,20 @@ export const allPosts = [
     <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">ExampleComponent</span>;
     </pre><p><br></p><p>Bu örnekte, useEffect içindeki fonksiyon, her render işlemi sonrasında çalışacaktır. Eğer boş bir bağımlılıklar listesi bırakırsanız ([]), bu efekt sadece bileşenin monte edilme ve demonte edilme anlarında çalışacaktır. Bağımlılıklar listesine özel bir state eklerseniz, bu efekt sadece o state değiştiğinde çalışacaktır.</p><p>Temizleme fonksiyonu, bileşen demonte edildiğinde veya bağımlılıklar değiştiğinde çalışır. Bu, örneğin abonelikleri veya zamanlayıcıları temizleme gibi işlemler için kullanışlıdır.</p>
     `,
+  },
+
+  {
+    id: 2,
+
+    tarih: "30 Kasım 2023",
+    etiket: "Yazılım",
+    baslik: "Beyefendi ile  Kelime Tespiti ve Sansürleme ",
+    metin: `<p>Öncelikle kütüphaneyi yüklememiz gerekiyor.</p><pre class="ql-syntax" spellcheck="false"><span class="hljs-built_in">npm</span> i beyefendi
+    </pre><p>Komutuyla npmi yükledikten sonra import etmeliyiz.</p><pre class="ql-syntax" spellcheck="false">import {checkFill} <span class="hljs-keyword">from</span> <span class="hljs-string">"beyefendi"</span>
+    
+    <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">isHaveBad</span> = <span class="hljs-title function_ invoke__">checkFill</span>({<span class="hljs-attr">text</span>:<span class="hljs-string">"word1"</span>}) <span class="hljs-comment">// return true</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">filteredText</span> = <span class="hljs-title function_ invoke__">checkFill</span>({<span class="hljs-attr">text</span>:<span class="hljs-string">"word1"</span>,<span class="hljs-attr">returnType</span>:<span class="hljs-number">1</span>})  <span class="hljs-comment">// return '*****'</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">filteredOptions</span> = <span class="hljs-title function_ invoke__">checkFill</span>({<span class="hljs-attr">text</span>:<span class="hljs-string">"word1"</span>,<span class="hljs-attr">addWords</span>:[<span class="hljs-string">"word5,word6"</span>],<span class="hljs-attr">deleteWords</span>:[<span class="hljs-string">"word1"</span>,<span class="hljs-string">"word2"</span>]}) <span class="hljs-comment">// return false</span>
+    </pre><p>returnType default olarak 0dır. Bu şekilde checkFill fonksiyonuna bir text verdiğimizde defaultWords dizisindeki kelimelerden birini bulduğunda true dönecektir. Bu şekilde istenmeyen kelime tespiti yapılabilir.</p><p><br></p><p>returnType parametresini 1 olarak verdiğimizde ise verilen metindeki istenmeyen kelimeyi bulup kelime uzunluğu kadar * ile değiştirmektedir. Bu sayede daha önceden eklenmiş olan fakat görüntülenmemesini istediğiniz kelimeleri sansürleyebilirsiniz.</p><p><br></p><p>addWord parametresi ise bir dizi almaktadır. Dinamik olarak yeni kelimeler eklemek isterseniz bu parametreye dizi olarak verebilirsiniz. </p><p>deleteWords parametreside benzer şekilde dinamik olarak belirli kelimelerin filtreye takılmasını engellemek için kullanılabilmektedir.</p><p><br></p><p>Kütüphaneye <a href="https://www.npmjs.com/package/beyefendi" rel="noopener noreferrer" target="_blank">https://www.npmjs.com/package/beyefendi</a> adresinden erişebilirsiniz.</p><p><br></p>`,
   },
 ];
