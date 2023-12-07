@@ -15,6 +15,7 @@ const MainPage = () => {
   const kodRef = useRef();
 
   const developerTextOptions = [
+    "Computer Engineer",
     "Full Stack Developer",
     "Front End Developer",
     "Back End Developer",
@@ -63,25 +64,24 @@ const MainPage = () => {
 
   // Belirli bir süre sonra metni değiştir
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (charIndex < developerTextOptions[textIndex].length) {
-        // Increment charIndex and display characters
+    const currentText = developerTextOptions[textIndex];
+
+  
+    const typingInterval = setInterval(() => {
+      if (charIndex < currentText.length) {
+        setDeveloperText((prevText) => prevText + currentText[charIndex]);
         setCharIndex((prevIndex) => prevIndex + 1);
-        setDeveloperText((prevText) =>
-          developerTextOptions[textIndex].substring(0, charIndex + 1)
-        );
       } else {
+        clearInterval(typingInterval);
         setTimeout(() => {
-          // Reset charIndex to -1 when transitioning to a new title
-          setCharIndex(-1);
-          setTextIndex(
-            (prevTextIndex) => (prevTextIndex + 1) % developerTextOptions.length
-          );
+          setCharIndex(0);
+          setTextIndex((prevTextIndex) => (prevTextIndex + 1) % developerTextOptions.length);
           setDeveloperText("");
-        }, 1000);
+        }, 1500);
       }
     }, 100);
-    return () => clearInterval(interval);
+  
+    return () => clearInterval(typingInterval);
   }, [charIndex, textIndex]);
   useEffect(() => {
     const language = "html";
